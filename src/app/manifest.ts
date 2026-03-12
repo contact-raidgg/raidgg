@@ -1,0 +1,21 @@
+import type { MetadataRoute } from "next";
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: "RaidGG — Gaming Blog",
+    short_name: "RaidGG",
+    description:
+      "Your ultimate gaming command center. Redeem codes, game guides, pro settings, gear reviews, and esports news.",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#07080f",
+    theme_color: "#00f0ff",
+    icons: [
+      {
+        src: "/favicon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+      },
+    ],
+  };
+}
