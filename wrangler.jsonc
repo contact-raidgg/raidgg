@@ -9,6 +9,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "raidgg",
+	"account_id": "b735329135c2f621dc9d883c578abb88",
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2026-03-10",
 	"compatibility_flags": [
@@ -19,31 +20,18 @@
 		"binding": "ASSETS",
 		"directory": ".open-next/assets"
 	},
-	"images": {
-		// Enable image optimization
-		// see https://opennext.js.org/cloudflare/howtos/image
-		"binding": "IMAGES"
-	},
-	"services": [
-		{
-			// Self-reference service binding, the service name must match the worker name
-			// see https://opennext.js.org/cloudflare/caching
-			"binding": "WORKER_SELF_REFERENCE",
-			"service": "raidgg"
-		}
-	],
+	// Images binding — enable when needed (requires Cloudflare Images)
+	// "images": { "binding": "IMAGES" },
+	// Self-reference service binding for caching — enable if needed
+	// "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "raidgg" }],
 	"observability": {
 		"enabled": true
 	},
-	"kv_namespaces": [
-		{
-			"binding": "REDEEM_CODES",
-			"id": "PLACEHOLDER_KV_ID"
-		}
-	],
-	"vars": {
-		"ADMIN_PASSWORD": "raidgg2026admin"
-	}
+	// KV namespace for dynamic redeem codes — add back later when needed
+	// "kv_namespaces": [{ "binding": "REDEEM_CODES", "id": "YOUR_KV_ID" }],
+	// ADMIN_PASSWORD is stored as a Cloudflare secret — do NOT put it here.
+	// To set it, run: wrangler secret put ADMIN_PASSWORD
+	"vars": {}
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
