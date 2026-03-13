@@ -1693,7 +1693,7 @@ const posts: PostMeta[] = [
     date: "2026-03-08",
     author: "RaidGG Team",
     readTime: "12 min",
-    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b2b28?w=800&h=450&fit=crop",
+    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=450&fit=crop",
     imageAlt: "Gaming setup for Genshin Impact beginners guide",
     sections: [
       { type: "paragraph", html: "Starting <strong>Genshin Impact</strong> in 2026 can feel overwhelming with years of content available. This guide covers <strong>everything a new player needs to know</strong> — from Resin management to team building to the gacha system." },
