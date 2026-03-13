@@ -8,7 +8,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "raidgg",
+	"name": "raidgg-site",
 	"account_id": "b735329135c2f621dc9d883c578abb88",
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2026-03-10",
