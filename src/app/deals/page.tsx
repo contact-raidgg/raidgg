@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   title: "Gaming Deals — Best Discounts This Week",
   description:
     "This week's best gaming deals on peripherals, components, games, and accessories. Updated weekly with the hottest discounts.",
-  path: "/deals",
+  path: "/deals/",
 });
 
 export default function DealsPage() {
@@ -26,7 +26,7 @@ export default function DealsPage() {
           __html: JSON.stringify(generateCollectionPageSchema({
             name: "Gaming Deals — Best Discounts This Week",
             description: "This week's best gaming deals on peripherals, components, games, and accessories. Updated weekly with the hottest discounts.",
-            url: "https://raidgg.com/deals",
+            url: "https://raidgg.com/deals/",
           })),
         }}
       />

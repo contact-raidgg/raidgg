@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   title: "Pro Player Settings — Sensitivity, Crosshair & Keybinds",
   description:
     "Copy the exact settings, sensitivity, crosshair codes, and keybinds of professional players in BGMI, Valorant, Free Fire, Fortnite, and Apex Legends.",
-  path: "/pro-settings",
+  path: "/pro-settings/",
 });
 
 export default function ProSettingsPage() {
@@ -27,7 +27,7 @@ export default function ProSettingsPage() {
           __html: JSON.stringify(generateCollectionPageSchema({
             name: "Pro Player Settings — Sensitivity, Crosshair & Keybinds",
             description: "Copy the exact settings, sensitivity, crosshair codes, and keybinds of professional players in BGMI, Valorant, Free Fire, Fortnite, and Apex Legends.",
-            url: "https://raidgg.com/pro-settings",
+            url: "https://raidgg.com/pro-settings/",
           })),
         }}
       />
@@ -51,7 +51,7 @@ export default function ProSettingsPage() {
             {category.subcategories.map((sub) => (
               <Link
                 key={sub.slug}
-                href={`/pro-settings/${sub.slug}`}
+                href={`/pro-settings/${sub.slug}/`}
                 className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]"
               >
                 <h3 className="font-heading text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">

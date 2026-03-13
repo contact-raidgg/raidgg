@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   title: "Game Guides — Tips, Tricks & Walkthroughs",
   description:
     "In-depth game guides, tips, tricks, and walkthroughs for BGMI, Free Fire, Valorant, Genshin Impact, Fortnite, and more.",
-  path: "/game-guides",
+  path: "/game-guides/",
 });
 
 export default function GameGuidesPage() {
@@ -27,7 +27,7 @@ export default function GameGuidesPage() {
           __html: JSON.stringify(generateCollectionPageSchema({
             name: "Game Guides — Tips, Tricks & Walkthroughs",
             description: "In-depth game guides, tips, tricks, and walkthroughs for BGMI, Free Fire, Valorant, Genshin Impact, Fortnite, and more.",
-            url: "https://raidgg.com/game-guides",
+            url: "https://raidgg.com/game-guides/",
           })),
         }}
       />
@@ -51,7 +51,7 @@ export default function GameGuidesPage() {
             {category.subcategories.map((sub) => (
               <Link
                 key={sub.slug}
-                href={`/game-guides/${sub.slug}`}
+                href={`/game-guides/${sub.slug}/`}
                 className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]"
               >
                 <h3 className="font-heading text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">

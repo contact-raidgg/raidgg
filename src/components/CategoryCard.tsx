@@ -17,7 +17,7 @@ export default function CategoryCard({
 }: CategoryCardProps) {
   return (
     <Link
-      href={`/${slug}`}
+      href={`/${slug}/`}
       className="group block rounded-xl bg-[var(--color-surface)] p-6 border border-[var(--color-border)] transition-all duration-300 hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]"
     >
       <div className="text-3xl mb-3">{icon}</div>

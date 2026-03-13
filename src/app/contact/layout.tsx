@@ -4,7 +4,7 @@ export const metadata = buildMetadata({
   title: "Contact Us",
   description:
     "Get in touch with the RaidGG team. Send us tips, feedback, partnership inquiries, or questions.",
-  path: "/contact",
+  path: "/contact/",
 });
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

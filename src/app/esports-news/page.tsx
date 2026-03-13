@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   title: "Esports News — Tournament Results, Rosters & More",
   description:
     "Latest esports news including tournament results, roster changes, standings, and industry updates for BGMI, Valorant, and global esports.",
-  path: "/esports-news",
+  path: "/esports-news/",
 });
 
 export default function EsportsNewsPage() {
@@ -27,7 +27,7 @@ export default function EsportsNewsPage() {
           __html: JSON.stringify(generateCollectionPageSchema({
             name: "Esports News — Tournament Results, Rosters & More",
             description: "Latest esports news including tournament results, roster changes, standings, and industry updates for BGMI, Valorant, and global esports.",
-            url: "https://raidgg.com/esports-news",
+            url: "https://raidgg.com/esports-news/",
           })),
         }}
       />
@@ -51,7 +51,7 @@ export default function EsportsNewsPage() {
             {category.subcategories.map((sub) => (
               <Link
                 key={sub.slug}
-                href={`/esports-news/${sub.slug}`}
+                href={`/esports-news/${sub.slug}/`}
                 className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]"
               >
                 <h3 className="font-heading text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">

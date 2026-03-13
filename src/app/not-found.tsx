@@ -39,7 +39,7 @@ export default function NotFound() {
           Respawn at Home
         </Link>
         <Link
-          href="/redeem-codes"
+          href="/redeem-codes/"
           className="rounded-lg border border-[var(--color-border)] px-6 py-3 font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
         >
           Get Redeem Codes

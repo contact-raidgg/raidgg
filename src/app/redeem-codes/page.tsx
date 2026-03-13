@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   title: "Game Redeem Codes — Updated Daily",
   description:
     "Get the latest working redeem codes for Free Fire, BGMI, COD Mobile, Roblox, Genshin Impact, Honkai Star Rail, and more. Updated daily with new codes.",
-  path: "/redeem-codes",
+  path: "/redeem-codes/",
 });
 
 export default function RedeemCodesPage() {
@@ -27,7 +27,7 @@ export default function RedeemCodesPage() {
           __html: JSON.stringify(generateCollectionPageSchema({
             name: "Game Redeem Codes — Updated Daily",
             description: "Get the latest working redeem codes for Free Fire, BGMI, COD Mobile, Roblox, Genshin Impact, Honkai Star Rail, and more. Updated daily with new codes.",
-            url: "https://raidgg.com/redeem-codes",
+            url: "https://raidgg.com/redeem-codes/",
           })),
         }}
       />
@@ -52,7 +52,7 @@ export default function RedeemCodesPage() {
             {category.subcategories.map((sub) => (
               <Link
                 key={sub.slug}
-                href={`/redeem-codes/${sub.slug}`}
+                href={`/redeem-codes/${sub.slug}/`}
                 className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]"
               >
                 <h3 className="font-heading text-lg font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
