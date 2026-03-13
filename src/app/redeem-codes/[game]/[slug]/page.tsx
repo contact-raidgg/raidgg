@@ -4,8 +4,6 @@ import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/content";
 import { getCategoryBySlug } from "@/lib/categories";
 import { buildMetadata, generateArticleSchema, generateFAQSchema, SITE_URL } from "@/lib/seo";
 import PostContent from "@/components/PostContent";
-import { getCodesForGame } from "@/lib/kv-codes";
-
 // Fully static — rebuild to update codes
 
 interface PageProps {
@@ -40,12 +38,7 @@ export default async function RedeemCodePostPage({ params }: PageProps) {
   if (!post || post.category !== "redeem-codes" || post.subcategory !== game)
     notFound();
 
-  // Fetch live codes from KV (falls back to static codes)
-  const liveCodes = await getCodesForGame(game);
-  const postWithLiveCodes = {
-    ...post,
-    codes: liveCodes.length > 0 ? liveCodes : post.codes,
-  };
+  const postWithLiveCodes = post;
 
   const category = getCategoryBySlug("redeem-codes");
   const sub = category?.subcategories?.find((s) => s.slug === game);

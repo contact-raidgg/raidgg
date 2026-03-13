@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raidgg.com/sitemap.xml

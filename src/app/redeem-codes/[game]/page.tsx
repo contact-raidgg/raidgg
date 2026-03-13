@@ -7,7 +7,6 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import PostCard from "@/components/PostCard";
 import RedeemCodeTable from "@/components/RedeemCodeTable";
 import LazyAd from "@/components/LazyAd";
-import { getCodesForGame } from "@/lib/kv-codes";
 
 // Fully static — rebuild to update codes
 
@@ -43,9 +42,7 @@ export default async function GameRedeemCodesPage({ params }: PageProps) {
   const posts = getPostsBySubcategory("redeem-codes", game);
   const latestPost = posts[0];
 
-  // Fetch live codes from KV (falls back to static codes)
-  const liveCodes = await getCodesForGame(game);
-  const displayCodes = liveCodes.length > 0 ? liveCodes : (latestPost?.codes ?? []);
+  const displayCodes = latestPost?.codes ?? [];
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10">
