@@ -6,7 +6,7 @@ import { buildMetadata, generateArticleSchema, generateFAQSchema, SITE_URL } fro
 import PostContent from "@/components/PostContent";
 import { getCodesForGame } from "@/lib/kv-codes";
 
-export const revalidate = 300; // 5 min — codes update frequently
+// Fully static — rebuild to update codes
 
 interface PageProps {
   params: Promise<{ game: string; slug: string }>;

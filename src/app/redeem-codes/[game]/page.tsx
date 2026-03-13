@@ -9,7 +9,7 @@ import RedeemCodeTable from "@/components/RedeemCodeTable";
 import LazyAd from "@/components/LazyAd";
 import { getCodesForGame } from "@/lib/kv-codes";
 
-export const revalidate = 300; // 5 min — codes update frequently
+// Fully static — rebuild to update codes
 
 interface PageProps {
   params: Promise<{ game: string }>;
