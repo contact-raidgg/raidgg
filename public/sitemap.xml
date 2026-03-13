@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static pages -->
+  <url><loc>https://raidgg.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://raidgg.com/about/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://raidgg.com/contact/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://raidgg.com/privacy-policy/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raidgg.com/disclaimer/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raidgg.com/terms/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raidgg.com/dmca/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <!-- Category hub pages -->
+  <url><loc>https://raidgg.com/redeem-codes/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://raidgg.com/game-guides/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/esports-news/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://raidgg.com/deals/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+
+  <!-- Redeem Codes subcategory pages -->
+  <url><loc>https://raidgg.com/redeem-codes/free-fire/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/bgmi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/cod-mobile/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/roblox/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/genshin-impact/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/honkai-star-rail/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/pubg-mobile/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/wuthering-waves/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/zenless-zone-zero/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/mobile-legends/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/honkai-impact/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+
+  <!-- Game Guides subcategory pages -->
+  <url><loc>https://raidgg.com/game-guides/bgmi/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/free-fire/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/valorant/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/cod-mobile/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/genshin-impact/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/fortnite/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Pro Settings subcategory pages -->
+  <url><loc>https://raidgg.com/pro-settings/bgmi/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/free-fire/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/valorant/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/fortnite/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/apex-legends/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/cs2/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/cod-mobile/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Esports News subcategory pages -->
+  <url><loc>https://raidgg.com/esports-news/bgmi/</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/valorant/</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/free-fire/</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/fortnite/</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/global/</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+
+  <!-- Redeem Codes posts -->
+  <url><loc>https://raidgg.com/redeem-codes/free-fire/free-fire-redeem-codes-today/</loc><lastmod>2026-03-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/bgmi/bgmi-redeem-codes-today/</loc><lastmod>2026-03-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/</loc><lastmod>2026-03-11</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/roblox/roblox-promo-codes-today/</loc><lastmod>2026-03-11</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/</loc><lastmod>2026-03-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/honkai-star-rail/honkai-star-rail-codes-today/</loc><lastmod>2026-03-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/pubg-mobile/pubg-mobile-redeem-codes-today/</loc><lastmod>2026-03-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/wuthering-waves/wuthering-waves-redeem-codes-today/</loc><lastmod>2026-03-11</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/zenless-zone-zero/zenless-zone-zero-redeem-codes-today/</loc><lastmod>2026-03-11</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/mobile-legends/mobile-legends-redeem-codes-today/</loc><lastmod>2026-03-10</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://raidgg.com/redeem-codes/honkai-impact/honkai-impact-3rd-redeem-codes-today/</loc><lastmod>2026-03-10</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+
+  <!-- Game Guides posts -->
+  <url><loc>https://raidgg.com/game-guides/bgmi/bgmi-best-sensitivity-settings/</loc><lastmod>2026-03-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/free-fire/free-fire-best-character-combinations/</loc><lastmod>2026-03-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/valorant/valorant-crosshair-codes-pro-players/</loc><lastmod>2026-03-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/cod-mobile/cod-mobile-best-loadouts/</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/genshin-impact/genshin-impact-tier-list/</loc><lastmod>2026-03-06</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/fortnite/fortnite-best-landing-spots/</loc><lastmod>2026-03-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/free-fire/how-to-get-free-diamonds-free-fire/</loc><lastmod>2026-03-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/valorant/valorant-map-callouts-all-maps/</loc><lastmod>2026-03-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/bgmi/bgmi-tips-reach-conqueror/</loc><lastmod>2026-03-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/genshin-impact/genshin-impact-beginners-guide/</loc><lastmod>2026-03-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/game-guides/fortnite/best-fortnite-keybinds-2026/</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Pro Settings posts -->
+  <url><loc>https://raidgg.com/pro-settings/bgmi/jonathan-bgmi-settings/</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/valorant/tenz-valorant-settings/</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/free-fire/ajjubhai-free-fire-settings/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/fortnite/bugha-fortnite-settings/</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/apex-legends/imperialhal-apex-settings/</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/valorant/demon1-valorant-settings/</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/bgmi/neyoo-bgmi-settings/</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/valorant/aspas-valorant-settings/</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/cs2/zywoo-cs2-settings/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pro-settings/cod-mobile/iferg-cod-mobile-settings/</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Gaming Gear posts (no subcategory) -->
+  <url><loc>https://raidgg.com/gaming-gear/best-gaming-mice-2026/</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-mechanical-keyboards-gaming/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-gaming-headsets-under-100/</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-1440p-gaming-monitors/</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-gaming-mousepads-2026/</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-gaming-chairs-under-300/</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-gaming-earbuds-mobile/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-webcams-streaming-2026/</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-gear/best-controllers-pc-gaming-2026/</loc><lastmod>2026-03-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- PC Builds posts (no subcategory) -->
+  <url><loc>https://raidgg.com/pc-builds/budget-gaming-pc-build-500/</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/mid-range-gaming-pc-build-1000/</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/high-end-gaming-pc-build-2026/</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/streaming-pc-setup-beginners/</loc><lastmod>2026-03-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/best-750-gaming-pc-build-2026/</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/best-1500-gaming-pc-build-2026/</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/mini-itx-gaming-pc-build-2026/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/best-pc-build-valorant-cs2-2026/</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/pc-builds/best-4k-gaming-pc-build-2026/</loc><lastmod>2026-03-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Gaming Phones posts (no subcategory) -->
+  <url><loc>https://raidgg.com/gaming-phones/best-gaming-phones-under-15k/</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/best-gaming-phones-under-25k/</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/best-flagship-gaming-phones-2026/</loc><lastmod>2026-03-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/best-gaming-phones-under-40k/</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/iqoo-neo-10-pro-vs-oneplus-13r-gaming/</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/best-phones-genshin-impact-2026/</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/rog-phone-9-vs-red-magic-10-pro/</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/gaming-phones/best-gaming-phone-accessories-2026/</loc><lastmod>2026-03-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Esports News posts -->
+  <url><loc>https://raidgg.com/esports-news/bgmi/bgmi-pro-league-2026-spring/</loc><lastmod>2026-03-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/valorant/vct-masters-bangkok-2026/</loc><lastmod>2026-03-10</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/global/top-esports-earnings-2026/</loc><lastmod>2026-03-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/free-fire/free-fire-world-series-2026/</loc><lastmod>2026-03-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/bgmi/bgmi-master-series-season-3/</loc><lastmod>2026-03-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/valorant/vct-2026-format-changes/</loc><lastmod>2026-03-09</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/fortnite/fortnite-championship-series-2026-spring/</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/esports-news/global/top-esports-teams-2026/</loc><lastmod>2026-03-06</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Deals posts (no subcategory) -->
+  <url><loc>https://raidgg.com/deals/best-gaming-deals-march-2026/</loc><lastmod>2026-03-11</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/deals/amazon-gaming-deals-march-week-2-2026/</loc><lastmod>2026-03-10</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/deals/flipkart-gaming-deals-march-2026/</loc><lastmod>2026-03-09</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/deals/steam-spring-sale-2026-best-deals/</loc><lastmod>2026-03-08</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raidgg.com/deals/gaming-laptop-deals-under-1000-march-2026/</loc><lastmod>2026-03-07</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
