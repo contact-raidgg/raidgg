@@ -3,6 +3,11 @@
 	"name": "raidgg-site",
 	"account_id": "b735329135c2f621dc9d883c578abb88",
 	"compatibility_date": "2026-03-10",
+	"workers_dev": false,
+	"routes": [
+		{ "pattern": "raidgg.com/*", "zone_name": "raidgg.com" },
+		{ "pattern": "www.raidgg.com/*", "zone_name": "raidgg.com" }
+	],
 	"assets": {
 		"directory": "out"
 	}
