@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostsBySubcategory } from "@/lib/content";
 import { getCategoryBySlug } from "@/lib/categories";
-import { buildMetadata, generateCollectionPageSchema, generateFAQSchema } from "@/lib/seo";
+import { buildMetadata, generateCollectionPageSchema } from "@/lib/seo";
+import { getPostUrl } from "@/lib/utils";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PostCard from "@/components/PostCard";
-import LiveRedeemCodes from "@/components/LiveRedeemCodes";
 import LazyAd from "@/components/LazyAd";
-
-// Fully static — rebuild to update codes
 
 interface PageProps {
   params: Promise<{ game: string }>;
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return buildMetadata({
     title: `${sub.name} Redeem Codes — Updated Daily`,
-    description: `Get the latest working ${sub.name} redeem codes. Free rewards, diamonds, UC, primogems, and more. Updated daily.`,
+    description: `All ${sub.name} redeem code posts, guides, and rewards. Find today's working codes, redemption guides, and tips.`,
     path: `/redeem-codes/${game}`,
   });
 }
@@ -41,8 +40,6 @@ export default async function GameRedeemCodesPage({ params }: PageProps) {
 
   const posts = getPostsBySubcategory("redeem-codes", game);
   const latestPost = posts[0];
-
-  const displayCodes = latestPost?.codes ?? [];
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10">
@@ -59,7 +56,7 @@ export default async function GameRedeemCodesPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(generateCollectionPageSchema({
             name: `${sub.name} Redeem Codes — Updated Daily`,
-            description: `Get the latest working ${sub.name} redeem codes. Free rewards, diamonds, UC, primogems, and more. Updated daily.`,
+            description: `All ${sub.name} redeem code posts, guides, and rewards.`,
             url: `https://raidgg.com/redeem-codes/${game}`,
           })),
         }}
@@ -69,70 +66,45 @@ export default async function GameRedeemCodesPage({ params }: PageProps) {
         {sub.name} Redeem Codes
       </h1>
       <p className="text-[var(--color-text-muted)] mb-8">
-        All the latest working {sub.name} redeem codes, updated daily with new rewards.
+        All {sub.name} redeem code guides and daily updated codes.
       </p>
 
-      {/* Show code table — live fetch for supported games, static for others */}
-      <section className="mb-10">
-        <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
-          Today&apos;s Active Codes
-        </h2>
-        <LiveRedeemCodes
-          gameSlug={game}
-          gameName={latestPost?.game || sub.name}
-          fallbackCodes={displayCodes}
-        />
-      </section>
-
-      {/* FAQ Schema for posts with FAQs */}
-      {latestPost?.faqs && latestPost.faqs.length > 0 && (
-        <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(generateFAQSchema(latestPost.faqs)),
-            }}
-          />
-          <section className="mb-10">
-            <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {latestPost.faqs.map((faq, i) => (
-                <details
-                  key={i}
-                  className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] group"
-                >
-                  <summary className="cursor-pointer px-5 py-4 font-medium text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">
-                    {faq.question}
-                  </summary>
-                  <p className="px-5 pb-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </section>
-        </>
+      {/* CTA to latest codes post */}
+      {latestPost && (
+        <Link
+          href={getPostUrl(latestPost)}
+          className="block mb-10 rounded-xl border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/5 p-6 hover:border-[var(--color-primary)] transition-colors"
+        >
+          <p className="text-xs font-medium text-[var(--color-primary)] mb-2 uppercase tracking-wider">
+            Latest Codes — Updated Daily
+          </p>
+          <h2 className="font-heading text-xl font-bold text-[var(--color-text)] mb-2">
+            {latestPost.title}
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] mb-3">
+            {latestPost.description}
+          </p>
+          <span className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-primary)]">
+            View all {latestPost.codes?.length || 0} active codes &rarr;
+          </span>
+        </Link>
       )}
 
       <LazyAd slot={`redeem-${game}-mid`} format="leaderboard" />
 
       {/* All posts for this game */}
-      <section className="mt-10">
-        <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-6">
-          All {sub.name} Code Posts
-        </h2>
-        {posts.length > 0 ? (
+      {posts.length > 1 && (
+        <section className="mt-10">
+          <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-6">
+            All {sub.name} Posts
+          </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
           </div>
-        ) : (
-          <p className="text-[var(--color-text-muted)]">No posts yet. Check back soon!</p>
-        )}
-      </section>
+        </section>
+      )}
     </div>
   );
 }

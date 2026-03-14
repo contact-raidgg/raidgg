@@ -203,9 +203,9 @@ function TableOfContents({ sections }: { sections: ContentBlock[] }) {
       <p className="font-heading text-sm font-semibold text-[var(--color-text)] mb-3">
         Table of Contents
       </p>
-      <ol className="space-y-1.5 text-sm">
+      <ul className="space-y-1.5 text-sm list-disc pl-5">
         {headings.map((h, i) => (
-          <li key={i} className={h.level === 3 ? "pl-4" : ""}>
+          <li key={i} className={h.level === 3 ? "ml-4" : ""}>
             <a
               href={`#${h.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
               className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
@@ -214,7 +214,7 @@ function TableOfContents({ sections }: { sections: ContentBlock[] }) {
             </a>
           </li>
         ))}
-      </ol>
+      </ul>
     </nav>
   );
 }
@@ -277,6 +277,20 @@ export default function PostContent({
         />
       )}
 
+      {/* Redeem Code Table — shown FIRST for code pages (users want codes immediately) */}
+      {post.codes !== undefined && (
+        <section className="mb-10">
+          <h2 id="active-codes" className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4 scroll-mt-20">
+            Active Codes
+          </h2>
+          <LiveRedeemCodes
+            gameSlug={post.subcategory || ""}
+            gameName={post.game || post.title}
+            fallbackCodes={post.codes}
+          />
+        </section>
+      )}
+
       {/* Table of Contents */}
       {hasSections && <TableOfContents sections={post.sections!} />}
 
@@ -298,20 +312,6 @@ export default function PostContent({
             </p>
           ))}
         </div>
-      )}
-
-      {/* Redeem Code Table */}
-      {post.codes !== undefined && (
-        <section className="mb-10">
-          <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
-            Active Codes
-          </h2>
-          <LiveRedeemCodes
-            gameSlug={post.subcategory || ""}
-            gameName={post.game || post.title}
-            fallbackCodes={post.codes}
-          />
-        </section>
       )}
 
       <LazyAd slot={`post-${post.slug}-mid`} format="leaderboard" />
