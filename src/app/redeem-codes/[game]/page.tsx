@@ -5,7 +5,7 @@ import { getCategoryBySlug } from "@/lib/categories";
 import { buildMetadata, generateCollectionPageSchema, generateFAQSchema } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PostCard from "@/components/PostCard";
-import RedeemCodeTable from "@/components/RedeemCodeTable";
+import LiveRedeemCodes from "@/components/LiveRedeemCodes";
 import LazyAd from "@/components/LazyAd";
 
 // Fully static — rebuild to update codes
@@ -72,15 +72,17 @@ export default async function GameRedeemCodesPage({ params }: PageProps) {
         All the latest working {sub.name} redeem codes, updated daily with new rewards.
       </p>
 
-      {/* Show code table — live from KV or static fallback */}
-      {displayCodes.length > 0 && (
-        <section className="mb-10">
-          <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
-            Today&apos;s Active Codes
-          </h2>
-          <RedeemCodeTable codes={displayCodes} game={latestPost?.game || sub.name} />
-        </section>
-      )}
+      {/* Show code table — live fetch for supported games, static for others */}
+      <section className="mb-10">
+        <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
+          Today&apos;s Active Codes
+        </h2>
+        <LiveRedeemCodes
+          gameSlug={game}
+          gameName={latestPost?.game || sub.name}
+          fallbackCodes={displayCodes}
+        />
+      </section>
 
       {/* FAQ Schema for posts with FAQs */}
       {latestPost?.faqs && latestPost.faqs.length > 0 && (
