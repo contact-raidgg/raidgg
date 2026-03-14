@@ -179,6 +179,24 @@ function isCommonWord(str: string): boolean {
   return common.includes(str);
 }
 
+// ── Wuthering Waves ─────────────────────────────────────
+async function fetchWuWaCodes(): Promise<RedeemCode[]> {
+  try {
+    const res = await fetch(
+      "https://wutheringwaves.fandom.com/api.php?action=parse&page=Redemption_Code&prop=wikitext&format=json",
+      { headers: { "User-Agent": "RaidGG-Bot/1.0" } }
+    );
+    if (!res.ok) return [];
+
+    const data = (await res.json()) as any;
+    const wikitext: string = data?.parse?.wikitext?.["*"] || "";
+
+    return parseWikiCodes(wikitext);
+  } catch {
+    return [];
+  }
+}
+
 // ── Public API ───────────────────────────────────────────
 
 const HOYOVERSE_GAMES: Record<string, () => Promise<RedeemCode[]>> = {
@@ -186,6 +204,7 @@ const HOYOVERSE_GAMES: Record<string, () => Promise<RedeemCode[]>> = {
   "honkai-star-rail": fetchHSRCodes,
   "zenless-zone-zero": fetchZZZCodes,
   "honkai-impact": fetchHonkai3rdCodes,
+  "wuthering-waves": fetchWuWaCodes,
 };
 
 export async function fetchHoyoverseCodes(

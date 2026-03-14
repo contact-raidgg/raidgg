@@ -124,11 +124,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${rajdhani.variable} font-sans antialiased bg-[var(--color-base)] text-[var(--color-text)]`}
+        className={`${inter.variable} ${rajdhani.variable} font-sans antialiased bg-[var(--color-base)] text-[var(--color-text)] flex min-h-screen flex-col`}
         suppressHydrationWarning
       >
         <HeaderWrapper />
-        <main className="min-h-screen">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { PostMeta, ContentBlock } from "@/lib/types";
 import { formatDate } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import RedeemCodeTable from "@/components/RedeemCodeTable";
+import LiveRedeemCodes from "@/components/LiveRedeemCodes";
 import PostCard from "@/components/PostCard";
 import LazyAd from "@/components/LazyAd";
 
@@ -256,14 +256,15 @@ export default function PostContent({
       )}
 
       {/* Redeem Code Table */}
-      {post.codes && post.codes.length > 0 && (
+      {post.codes !== undefined && (
         <section className="mb-10">
           <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
             Active Codes
           </h2>
-          <RedeemCodeTable
-            codes={post.codes}
-            game={post.game || post.title}
+          <LiveRedeemCodes
+            gameSlug={post.subcategory || ""}
+            gameName={post.game || post.title}
+            fallbackCodes={post.codes}
           />
         </section>
       )}

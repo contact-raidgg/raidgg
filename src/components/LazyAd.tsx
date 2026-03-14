@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
+// Set to true when you have AdSense/affiliate ads ready to display
+const ADS_ENABLED = false;
+
 interface LazyAdProps {
   slot: string;
   format: "banner" | "rectangle" | "leaderboard";
@@ -34,6 +37,8 @@ export default function LazyAd({ slot, format }: LazyAdProps) {
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
+  if (!ADS_ENABLED) return null;
 
   return (
     <div

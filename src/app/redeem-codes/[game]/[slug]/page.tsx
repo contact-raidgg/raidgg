@@ -4,7 +4,7 @@ import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/content";
 import { getCategoryBySlug } from "@/lib/categories";
 import { buildMetadata, generateArticleSchema, generateFAQSchema, SITE_URL } from "@/lib/seo";
 import PostContent from "@/components/PostContent";
-// Fully static — rebuild to update codes
+// Static pages — live codes are fetched client-side
 
 interface PageProps {
   params: Promise<{ game: string; slug: string }>;
