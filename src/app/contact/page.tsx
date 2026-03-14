@@ -1,5 +1,6 @@
 import { buildMetadata } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 
 export const metadata = buildMetadata({
@@ -120,6 +121,14 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 mb-10">
+        <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-4">
+          Send Us a Message
+        </h2>
+        <ContactForm />
       </div>
 
       {/* Response time */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/content";
+import { getAllPosts, getPostBySlug, getRelatedPosts, getAdjacentPosts } from "@/lib/content";
 import { getCategoryBySlug } from "@/lib/categories";
 import { buildMetadata, generateArticleSchema, generateFAQSchema, SITE_URL } from "@/lib/seo";
 import PostContent from "@/components/PostContent";
@@ -40,6 +40,7 @@ export default async function ProSettingsPostPage({ params }: PageProps) {
   const category = getCategoryBySlug("pro-settings");
   const sub = category?.subcategories?.find((s) => s.slug === game);
   const related = getRelatedPosts(post);
+  const { prev, next } = getAdjacentPosts(post);
 
   return (
     <>
@@ -74,6 +75,8 @@ export default async function ProSettingsPostPage({ params }: PageProps) {
           { label: post.title },
         ]}
         relatedPosts={related}
+        prevPost={prev}
+        nextPost={next}
       />
     </>
   );

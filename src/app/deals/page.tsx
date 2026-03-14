@@ -1,7 +1,7 @@
 import { getPostsByCategory } from "@/lib/content";
 import { buildMetadata, generateCollectionPageSchema } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PostCard from "@/components/PostCard";
+import PaginatedGrid from "@/components/PaginatedGrid";
 import AffiliateCard from "@/components/AffiliateCard";
 import LazyAd from "@/components/LazyAd";
 
@@ -73,11 +73,7 @@ export default function DealsPage() {
           All Deal Posts
         </h2>
         {posts.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </div>
+          <PaginatedGrid posts={posts} perPage={9} />
         ) : (
           <p className="text-[var(--color-text-muted)]">No deals right now. Check back soon!</p>
         )}

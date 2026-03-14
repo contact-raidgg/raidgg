@@ -65,6 +65,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    // Replace with your actual Google Search Console verification code
+    // google: "your-google-verification-code",
+  },
 };
 
 const websiteJsonLd = {

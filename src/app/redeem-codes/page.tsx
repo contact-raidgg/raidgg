@@ -3,7 +3,7 @@ import { getPostsByCategory } from "@/lib/content";
 import { getCategoryBySlug } from "@/lib/categories";
 import { buildMetadata, generateCollectionPageSchema } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import PostCard from "@/components/PostCard";
+import PaginatedGrid from "@/components/PaginatedGrid";
 import LazyAd from "@/components/LazyAd";
 
 export const metadata = buildMetadata({
@@ -74,11 +74,7 @@ export default function RedeemCodesPage() {
         <h2 className="font-heading text-xl font-semibold text-[var(--color-text)] mb-6">
           Latest Redeem Code Posts
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
+        <PaginatedGrid posts={posts} perPage={9} />
       </section>
     </div>
   );

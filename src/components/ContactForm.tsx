@@ -2,14 +2,44 @@
 
 import { useState } from "react";
 
+const WEB3FORMS_KEY = "8cfaf5cf-878c-47c0-9ab2-9b5006c51632";
+
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to backend / form service
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: form.name,
+          email: form.email,
+          subject: `[RaidGG Contact] ${form.subject}`,
+          message: form.message,
+          from_name: "RaidGG Contact Form",
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Network error. Please try again or email us at contact@raidgg.com.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -88,11 +118,16 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-sm text-[var(--color-danger)]">{error}</p>
+      )}
+
       <button
         type="submit"
-        className="rounded-lg bg-[var(--color-primary)] px-8 py-3 font-semibold text-[var(--color-base)] transition-opacity hover:opacity-90"
+        disabled={loading}
+        className="rounded-lg bg-[var(--color-primary)] px-8 py-3 font-semibold text-[var(--color-base)] transition-opacity hover:opacity-90 disabled:opacity-50"
       >
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

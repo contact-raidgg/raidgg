@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { PostMeta } from "@/lib/types";
 import { getPostUrl } from "@/lib/utils";
+import { formatDate } from "@/lib/seo";
 
 interface PostCardProps {
   post: PostMeta;
@@ -45,7 +46,7 @@ export default function PostCard({ post }: PostCardProps) {
         )}
 
         <div className="mt-3 flex items-center gap-3 text-xs text-[var(--color-text-dim)]">
-          <time dateTime={post.date}>{post.date}</time>
+          <time dateTime={post.date}>{formatDate(post.date)}</time>
           {post.readTime && <span>{post.readTime}</span>}
         </div>
       </div>

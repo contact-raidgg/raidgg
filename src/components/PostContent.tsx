@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { PostMeta, ContentBlock } from "@/lib/types";
 import { formatDate } from "@/lib/seo";
+import { getPostUrl } from "@/lib/utils";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import LiveRedeemCodes from "@/components/LiveRedeemCodes";
 import PostCard from "@/components/PostCard";
@@ -18,16 +19,18 @@ function RichHTML({ html }: { html: string }) {
 
 function ContentBlockRenderer({ block }: { block: ContentBlock }) {
   switch (block.type) {
-    case "heading":
+    case "heading": {
+      const id = block.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
       return block.level === 2 ? (
-        <h2 className="font-heading text-2xl font-bold text-[var(--color-text)] mt-10 mb-4">
+        <h2 id={id} className="font-heading text-2xl font-bold text-[var(--color-text)] mt-10 mb-4 scroll-mt-20">
           {block.text}
         </h2>
       ) : (
-        <h3 className="font-heading text-xl font-semibold text-[var(--color-text)] mt-8 mb-3">
+        <h3 id={id} className="font-heading text-xl font-semibold text-[var(--color-text)] mt-8 mb-3 scroll-mt-20">
           {block.text}
         </h3>
       );
+    }
 
     case "paragraph":
       return (
@@ -187,18 +190,51 @@ function ContentBlockRenderer({ block }: { block: ContentBlock }) {
   }
 }
 
+// ── Table of Contents ──────────────────────────────────
+
+function TableOfContents({ sections }: { sections: ContentBlock[] }) {
+  const headings = sections.filter(
+    (b): b is Extract<ContentBlock, { type: "heading" }> => b.type === "heading"
+  );
+  if (headings.length < 3) return null;
+
+  return (
+    <nav className="mb-8 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+      <p className="font-heading text-sm font-semibold text-[var(--color-text)] mb-3">
+        Table of Contents
+      </p>
+      <ol className="space-y-1.5 text-sm">
+        {headings.map((h, i) => (
+          <li key={i} className={h.level === 3 ? "pl-4" : ""}>
+            <a
+              href={`#${h.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+              className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+}
+
 // ── Main PostContent Component ──────────────────────────
 
 interface PostContentProps {
   post: PostMeta;
   breadcrumbs: { label: string; href?: string }[];
   relatedPosts: PostMeta[];
+  prevPost?: PostMeta | null;
+  nextPost?: PostMeta | null;
 }
 
 export default function PostContent({
   post,
   breadcrumbs,
   relatedPosts,
+  prevPost,
+  nextPost,
 }: PostContentProps) {
   const hasSections = post.sections && post.sections.length > 0;
   const hasBody = post.body && post.body.length > 0;
@@ -213,6 +249,12 @@ export default function PostContent({
         </h1>
         <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-[var(--color-text-dim)]">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
+          {post.updated && post.updated !== post.date && (
+            <span className="flex items-center gap-1">
+              <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor"><path d="M8 3.5a.5.5 0 0 0-1 0V8a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 7.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg>
+              Updated: <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+            </span>
+          )}
           {post.readTime && <span>{post.readTime} read</span>}
           <span>By {post.author}</span>
         </div>
@@ -234,6 +276,9 @@ export default function PostContent({
           className="w-full rounded-xl mb-8 aspect-video object-cover"
         />
       )}
+
+      {/* Table of Contents */}
+      {hasSections && <TableOfContents sections={post.sections!} />}
 
       {/* Rich Structured Content (preferred) */}
       {hasSections && (
@@ -356,7 +401,52 @@ export default function PostContent({
         </section>
       )}
 
+      {/* Author Box */}
+      <section className="my-10 flex items-start gap-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)]/15 text-lg font-bold text-[var(--color-primary)]">
+          {post.author.charAt(0)}
+        </div>
+        <div>
+          <p className="font-heading font-semibold text-[var(--color-text)]">
+            {post.author}
+          </p>
+          <p className="mt-1 text-sm text-[var(--color-text-muted)]">
+            {post.author === "RaidGG Team"
+              ? "The RaidGG editorial team verifies every code, tests every product, and updates content daily to deliver accurate gaming information you can trust."
+              : `Contributing writer at RaidGG covering ${post.category.replace(/-/g, " ")}.`}
+          </p>
+        </div>
+      </section>
+
       <LazyAd slot={`post-${post.slug}-bottom`} format="leaderboard" />
+
+      {/* Prev / Next Navigation */}
+      {(prevPost || nextPost) && (
+        <nav className="my-10 grid gap-4 sm:grid-cols-2" aria-label="Post navigation">
+          {prevPost ? (
+            <Link
+              href={getPostUrl(prevPost)}
+              className="group flex flex-col rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 hover:border-[var(--color-primary)] transition-colors"
+            >
+              <span className="text-xs text-[var(--color-text-dim)] mb-1">&larr; Previous</span>
+              <span className="text-sm font-medium text-[var(--color-text)] group-hover:text-[var(--color-primary)] line-clamp-2 transition-colors">
+                {prevPost.title}
+              </span>
+            </Link>
+          ) : <div />}
+          {nextPost ? (
+            <Link
+              href={getPostUrl(nextPost)}
+              className="group flex flex-col items-end text-right rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 hover:border-[var(--color-primary)] transition-colors"
+            >
+              <span className="text-xs text-[var(--color-text-dim)] mb-1">Next &rarr;</span>
+              <span className="text-sm font-medium text-[var(--color-text)] group-hover:text-[var(--color-primary)] line-clamp-2 transition-colors">
+                {nextPost.title}
+              </span>
+            </Link>
+          ) : <div />}
+        </nav>
+      )}
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
