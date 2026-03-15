@@ -19,6 +19,10 @@ export function getPostUrl(post: {
   subcategory?: string;
   slug: string;
 }): string {
+  // Redeem codes: canonical URL is the game page (not the slug page)
+  if (post.category === "redeem-codes" && post.subcategory) {
+    return `/${post.category}/${post.subcategory}/`;
+  }
   if (post.subcategory) {
     return `/${post.category}/${post.subcategory}/${post.slug}/`;
   }

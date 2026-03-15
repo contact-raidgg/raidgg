@@ -73,12 +73,12 @@ const posts: PostMeta[] = [
         "<strong>In-game spectator:</strong> Watch directly inside BGMI via the Esports tab (limited slots).",
         "<strong>RaidGG:</strong> We update this page after every match day with standings, highlights, and analysis.",
       ]},
-      { type: "callout", variant: "tip", html: "<strong>Redeem codes during matches:</strong> Krafton often drops exclusive redeem codes during BGMI Pro League broadcasts. Watch live and check our <a href='/redeem-codes/bgmi/bgmi-redeem-codes-today/' class='text-[var(--color-primary)] underline'>BGMI Redeem Codes page</a> for the latest drops." },
+      { type: "callout", variant: "tip", html: "<strong>Redeem codes during matches:</strong> Krafton often drops exclusive redeem codes during BGMI Pro League broadcasts. Watch live and check our <a href='/redeem-codes/bgmi/' class='text-[var(--color-primary)] underline'>BGMI Redeem Codes page</a> for the latest drops." },
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related BGMI & Esports Coverage", links: [
         { text: "BGMI Master Series Season 3 Standings", href: "/esports-news/bgmi/bgmi-master-series-season-3/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
         { text: "Jonathan BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/jonathan-bgmi-settings/" },
         { text: "Neyoo BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/neyoo-bgmi-settings/" },
         { text: "Top 5 Esports Teams to Watch in 2026", href: "/esports-news/global/top-esports-teams-2026/" },
@@ -170,7 +170,7 @@ const posts: PostMeta[] = [
         "<strong>In-game:</strong> VCT Live tab inside Valorant client shows live match scores and post-match VODs.",
         "<strong>RaidGG:</strong> We update this page after every match day with standings, highlights, and player stats.",
       ]},
-      { type: "callout", variant: "tip", html: "<strong>Exclusive drops during broadcasts:</strong> Link your Riot account to YouTube or Twitch for a chance to earn <strong>VCT 2026 gun buddies and player cards</strong> while watching live. Check our <a href='/redeem-codes/valorant/valorant-redeem-codes-today/' class='text-[var(--color-primary)] underline'>Valorant Redeem Codes page</a> for additional codes." },
+      { type: "callout", variant: "tip", html: "<strong>Exclusive drops during broadcasts:</strong> Link your Riot account to YouTube or Twitch for a chance to earn <strong>VCT 2026 gun buddies and player cards</strong> while watching live. Check our <a href='/redeem-codes/valorant/' class='text-[var(--color-primary)] underline'>Valorant Redeem Codes page</a> for additional codes." },
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Valorant & Esports Coverage", links: [
@@ -178,7 +178,7 @@ const posts: PostMeta[] = [
         { text: "Best Valorant Pro Player Settings", href: "/pro-settings/valorant/best-valorant-pro-settings/" },
         { text: "Top 5 Esports Teams to Watch in 2026", href: "/esports-news/global/top-esports-teams-2026/" },
         { text: "Top 10 Esports Earnings 2026", href: "/esports-news/global/top-esports-earnings-2026/" },
-        { text: "Valorant Redeem Codes Today", href: "/redeem-codes/valorant/valorant-redeem-codes-today/" },
+        { text: "Valorant Redeem Codes Today", href: "/redeem-codes/valorant/" },
       ]},
     ],
     faqs: [
@@ -358,11 +358,11 @@ const posts: PostMeta[] = [
         "<strong>In-game:</strong> Free Fire's Esports tab shows live scores and post-match highlights.",
         "<strong>RaidGG:</strong> We update this page after every match day with standings, highlights, and kill leaderboards.",
       ]},
-      { type: "callout", variant: "tip", html: "<strong>Free redeem codes during FFWS!</strong> Garena drops exclusive redeem codes during every broadcast day. Watch live and check our <a href='/redeem-codes/free-fire/free-fire-redeem-codes-today/' class='text-[var(--color-primary)] underline'>Free Fire Redeem Codes page</a> for instant code updates — previous FFWS events gave away diamonds, skins, and emotes." },
+      { type: "callout", variant: "tip", html: "<strong>Free redeem codes during FFWS!</strong> Garena drops exclusive redeem codes during every broadcast day. Watch live and check our <a href='/redeem-codes/free-fire/' class='text-[var(--color-primary)] underline'>Free Fire Redeem Codes page</a> for instant code updates — previous FFWS events gave away diamonds, skins, and emotes." },
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Free Fire & Esports Coverage", links: [
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
         { text: "Best Free Fire Pro Settings", href: "/pro-settings/free-fire/best-free-fire-pro-settings/" },
         { text: "Top 10 Esports Earnings 2026", href: "/esports-news/global/top-esports-earnings-2026/" },
         { text: "Top 5 Esports Teams to Watch in 2026", href: "/esports-news/global/top-esports-teams-2026/" },
@@ -454,12 +454,12 @@ const posts: PostMeta[] = [
         "<strong>In-game spectator:</strong> Watch directly inside BGMI via the Esports tab (limited slots available).",
         "<strong>RaidGG:</strong> We update this page after every match day with standings, MVPs, and analysis.",
       ]},
-      { type: "callout", variant: "tip", html: "<strong>Redeem codes during matches:</strong> Krafton drops exclusive redeem codes during BGMS broadcasts. Watch live and check our <a href='/redeem-codes/bgmi/bgmi-redeem-codes-today/' class='text-[var(--color-primary)] underline'>BGMI Redeem Codes page</a> for the latest drops — previous BGMS seasons gave away UC, crate coupons, and tournament-themed skins." },
+      { type: "callout", variant: "tip", html: "<strong>Redeem codes during matches:</strong> Krafton drops exclusive redeem codes during BGMS broadcasts. Watch live and check our <a href='/redeem-codes/bgmi/' class='text-[var(--color-primary)] underline'>BGMI Redeem Codes page</a> for the latest drops — previous BGMS seasons gave away UC, crate coupons, and tournament-themed skins." },
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related BGMI & Esports Coverage", links: [
         { text: "BGMI Pro League 2026 Spring Standings", href: "/esports-news/bgmi/bgmi-pro-league-2026-spring/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
         { text: "Best BGMI Pro Player Settings", href: "/pro-settings/bgmi/best-bgmi-pro-player-settings/" },
         { text: "Jonathan BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/jonathan-bgmi-settings/" },
         { text: "Top 5 Esports Teams to Watch in 2026", href: "/esports-news/global/top-esports-teams-2026/" },
@@ -533,7 +533,7 @@ const posts: PostMeta[] = [
         "<strong>In-game:</strong> VCT Live tab inside the Valorant client shows live match scores, standings, and VODs.",
         "<strong>RaidGG:</strong> We cover every international event with live standings, analysis, and player stats.",
       ]},
-      { type: "callout", variant: "tip", html: "<strong>Drops during VCT matches:</strong> Link your Riot account to YouTube or Twitch for exclusive <strong>VCT 2026 gun buddies and player cards</strong>. Check our <a href='/redeem-codes/valorant/valorant-redeem-codes-today/' class='text-[var(--color-primary)] underline'>Valorant Redeem Codes page</a> for additional free items." },
+      { type: "callout", variant: "tip", html: "<strong>Drops during VCT matches:</strong> Link your Riot account to YouTube or Twitch for exclusive <strong>VCT 2026 gun buddies and player cards</strong>. Check our <a href='/redeem-codes/valorant/' class='text-[var(--color-primary)] underline'>Valorant Redeem Codes page</a> for additional free items." },
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Valorant & Esports Coverage", links: [
@@ -541,7 +541,7 @@ const posts: PostMeta[] = [
         { text: "Best Valorant Pro Player Settings", href: "/pro-settings/valorant/best-valorant-pro-settings/" },
         { text: "Top 5 Esports Teams to Watch in 2026", href: "/esports-news/global/top-esports-teams-2026/" },
         { text: "Top 10 Esports Earnings 2026", href: "/esports-news/global/top-esports-earnings-2026/" },
-        { text: "Valorant Redeem Codes Today", href: "/redeem-codes/valorant/valorant-redeem-codes-today/" },
+        { text: "Valorant Redeem Codes Today", href: "/redeem-codes/valorant/" },
       ]},
     ],
     faqs: [
@@ -629,14 +629,14 @@ const posts: PostMeta[] = [
         "<strong>Epic Games website:</strong> Live leaderboards and match-by-match results at fortnite.com/competitive.",
         "<strong>RaidGG:</strong> We cover every FNCS Major with standings, highlights, and meta analysis. Bookmark this page.",
       ]},
-      { type: "callout", variant: "tip", html: "<strong>Free rewards during FNCS:</strong> Epic Games drops exclusive Twitch drops and in-game items during FNCS broadcasts. Check our <a href='/redeem-codes/fortnite/fortnite-redeem-codes-today/' class='text-[var(--color-primary)] underline'>Fortnite Redeem Codes page</a> for the latest free items and V-Bucks codes." },
+      { type: "callout", variant: "tip", html: "<strong>Free rewards during FNCS:</strong> Epic Games drops exclusive Twitch drops and in-game items during FNCS broadcasts. Check our <a href='/redeem-codes/fortnite/' class='text-[var(--color-primary)] underline'>Fortnite Redeem Codes page</a> for the latest free items and V-Bucks codes." },
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Fortnite & Esports Coverage", links: [
         { text: "Top 10 Esports Earnings 2026", href: "/esports-news/global/top-esports-earnings-2026/" },
         { text: "Top 5 Esports Teams to Watch in 2026", href: "/esports-news/global/top-esports-teams-2026/" },
         { text: "Best Fortnite Pro Player Settings", href: "/pro-settings/fortnite/best-fortnite-pro-settings/" },
-        { text: "Fortnite Redeem Codes Today", href: "/redeem-codes/fortnite/fortnite-redeem-codes-today/" },
+        { text: "Fortnite Redeem Codes Today", href: "/redeem-codes/fortnite/" },
         { text: "VCT Masters Bangkok 2026", href: "/esports-news/valorant/vct-masters-bangkok-2026/" },
       ]},
     ],

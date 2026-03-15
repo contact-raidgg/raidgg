@@ -138,7 +138,7 @@ const posts: PostMeta[] = [
         { text: "BGMI Tips to Reach Conqueror", href: "/game-guides/bgmi/bgmi-tips-reach-conqueror/" },
         { text: "Jonathan BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/jonathan-bgmi-settings/" },
         { text: "Neyoo BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/neyoo-bgmi-settings/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
         { text: "Best Gaming Phones Under 15K for BGMI", href: "/gaming-phones/best-gaming-phones-under-15k/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
       ]},
@@ -301,7 +301,7 @@ const posts: PostMeta[] = [
       { type: "internal-links", title: "Related Free Fire Guides", links: [
         { text: "How to Get Free Diamonds in Free Fire", href: "/game-guides/free-fire/how-to-get-free-diamonds-free-fire/" },
         { text: "Ajjubhai Free Fire Settings", href: "/pro-settings/free-fire/ajjubhai-free-fire-settings/" },
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
         { text: "Best Gaming Phones Under 15K", href: "/gaming-phones/best-gaming-phones-under-15k/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
       ]},
@@ -571,7 +571,7 @@ const posts: PostMeta[] = [
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related COD Mobile Content", links: [
         { text: "iFerg COD Mobile Settings", href: "/pro-settings/cod-mobile/iferg-cod-mobile-settings/" },
-        { text: "COD Mobile Redeem Codes Today", href: "/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/" },
+        { text: "COD Mobile Redeem Codes Today", href: "/redeem-codes/cod-mobile/" },
         { text: "Best Gaming Phones Under 15K", href: "/gaming-phones/best-gaming-phones-under-15k/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
         { text: "Best Gaming Earbuds 2026", href: "/gaming-gear/best-gaming-earbuds-2026/" },
@@ -724,7 +724,7 @@ const posts: PostMeta[] = [
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Genshin Guides", links: [
         { text: "Genshin Impact Beginner's Guide", href: "/game-guides/genshin-impact/genshin-impact-beginners-guide/" },
-        { text: "Genshin Impact Redeem Codes Today", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
+        { text: "Genshin Impact Redeem Codes Today", href: "/redeem-codes/genshin-impact/" },
         { text: "Best Gaming Phones for Genshin", href: "/gaming-phones/best-phones-genshin-impact-2026/" },
         { text: "Best PC Build for Genshin Impact", href: "/pc-builds/best-pc-build-genshin-impact/" },
         { text: "Best Gaming Monitors 2026", href: "/gaming-gear/best-gaming-monitors-2026/" },
@@ -846,7 +846,7 @@ const posts: PostMeta[] = [
         { text: "Best Gaming Mice 2026", href: "/gaming-gear/best-gaming-mice-2026/" },
         { text: "Best Gaming Keyboards", href: "/gaming-gear/best-mechanical-keyboards-gaming/" },
         { text: "Best Gaming Monitors 2026", href: "/gaming-gear/best-gaming-monitors-2026/" },
-        { text: "Fortnite Redeem Codes", href: "/redeem-codes/fortnite/fortnite-redeem-codes-today/" },
+        { text: "Fortnite Redeem Codes", href: "/redeem-codes/fortnite/" },
       ]},
     ],
     faqs: [
@@ -971,7 +971,7 @@ const posts: PostMeta[] = [
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Free Fire Content", links: [
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
         { text: "Free Fire Best Character Combinations", href: "/game-guides/free-fire/free-fire-best-character-combinations/" },
         { text: "Ajjubhai Free Fire Settings", href: "/pro-settings/free-fire/ajjubhai-free-fire-settings/" },
         { text: "Best Gaming Phones Under 15K", href: "/gaming-phones/best-gaming-phones-under-15k/" },
@@ -1277,7 +1277,7 @@ const posts: PostMeta[] = [
         { text: "BGMI Best Sensitivity Settings for No Recoil", href: "/game-guides/bgmi/bgmi-best-sensitivity-settings/" },
         { text: "Jonathan BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/jonathan-bgmi-settings/" },
         { text: "Neyoo BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/neyoo-bgmi-settings/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
         { text: "Best Gaming Phones Under 15K for BGMI", href: "/gaming-phones/best-gaming-phones-under-15k/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
       ]},
@@ -1456,7 +1456,7 @@ const posts: PostMeta[] = [
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Genshin Content", links: [
         { text: "Genshin Impact Tier List 5.5", href: "/game-guides/genshin-impact/genshin-impact-tier-list/" },
-        { text: "Genshin Impact Redeem Codes Today", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
+        { text: "Genshin Impact Redeem Codes Today", href: "/redeem-codes/genshin-impact/" },
         { text: "Best Phones for Genshin Impact", href: "/gaming-phones/best-phones-genshin-impact-2026/" },
         { text: "Best PC Build for Genshin Impact", href: "/pc-builds/best-pc-build-genshin-impact/" },
         { text: "Best Gaming Monitors 2026", href: "/gaming-gear/best-gaming-monitors-2026/" },
@@ -1590,7 +1590,7 @@ const posts: PostMeta[] = [
         { text: "Best Gaming Mice 2026", href: "/gaming-gear/best-gaming-mice-2026/" },
         { text: "Best Gaming Keyboards", href: "/gaming-gear/best-mechanical-keyboards-gaming/" },
         { text: "Best Gaming Monitors 2026", href: "/gaming-gear/best-gaming-monitors-2026/" },
-        { text: "Fortnite Redeem Codes", href: "/redeem-codes/fortnite/fortnite-redeem-codes-today/" },
+        { text: "Fortnite Redeem Codes", href: "/redeem-codes/fortnite/" },
       ]},
     ],
     faqs: [

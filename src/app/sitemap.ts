@@ -38,20 +38,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  // Post pages
-  const postPages: MetadataRoute.Sitemap = posts.map((post) => {
-    const hasSubcategory = post.subcategory;
-    const url = hasSubcategory
-      ? `${SITE_URL}/${post.category}/${post.subcategory}/${post.slug}/`
-      : `${SITE_URL}/${post.category}/${post.slug}/`;
+  // Post pages (exclude redeem-codes — their canonical URL is the subcategory page)
+  const postPages: MetadataRoute.Sitemap = posts
+    .filter((post) => post.category !== "redeem-codes")
+    .map((post) => {
+      const hasSubcategory = post.subcategory;
+      const url = hasSubcategory
+        ? `${SITE_URL}/${post.category}/${post.subcategory}/${post.slug}/`
+        : `${SITE_URL}/${post.category}/${post.slug}/`;
 
-    return {
-      url,
-      lastModified: post.updated || post.date,
-      changeFrequency: post.category === "redeem-codes" ? ("daily" as const) : ("weekly" as const),
-      priority: 0.7,
-    };
-  });
+      return {
+        url,
+        lastModified: post.updated || post.date,
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      };
+    });
 
   return [...staticPages, ...categoryPages, ...subcategoryPages, ...postPages];
 }

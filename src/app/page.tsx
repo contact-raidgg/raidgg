@@ -1,10 +1,9 @@
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, formatDate } from "@/lib/seo";
 import Link from "next/link";
-import { getFeaturedPosts, getPostsByCategory, getAllPosts } from "@/lib/content";
+import { getPostsByCategory, getAllPosts } from "@/lib/content";
 import { categories } from "@/lib/categories";
 import { getPostUrl } from "@/lib/utils";
 import type { PostMeta } from "@/lib/types";
-import FeaturedPost from "@/components/FeaturedPost";
 import PostCard from "@/components/PostCard";
 import CategoryCard from "@/components/CategoryCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -12,7 +11,7 @@ import LazyAd from "@/components/LazyAd";
 import SearchBar from "@/components/SearchBar";
 
 export const metadata = buildMetadata({
-  title: "RaidGG — Your Ultimate Gaming Command Center",
+  title: "RaidGG — Daily Redeem Codes, Game Guides & Pro Settings",
   description:
     "Daily redeem codes for Free Fire, BGMI, Genshin Impact & more. Plus game guides, pro settings, gear reviews, PC builds, gaming phones, and esports news. RaidGG is your one-stop gaming blog.",
   path: "/",
@@ -20,21 +19,20 @@ export const metadata = buildMetadata({
 
 // Quick-access game list for the codes bar
 const codeGames = [
-  { name: "Free Fire", slug: "free-fire", icon: "🔥" },
-  { name: "BGMI", slug: "bgmi", icon: "🎯" },
-  { name: "Genshin", slug: "genshin-impact", icon: "⭐" },
-  { name: "COD Mobile", slug: "cod-mobile", icon: "🎖️" },
-  { name: "Roblox", slug: "roblox", icon: "🧱" },
-  { name: "HSR", slug: "honkai-star-rail", icon: "🚂" },
-  { name: "PUBG Mobile", slug: "pubg-mobile", icon: "🪖" },
-  { name: "Wuthering Waves", slug: "wuthering-waves", icon: "🌊" },
-  { name: "ZZZ", slug: "zenless-zone-zero", icon: "⚡" },
-  { name: "MLBB", slug: "mobile-legends", icon: "💎" },
-  { name: "Honkai 3rd", slug: "honkai-impact", icon: "🔮" },
+  { name: "Free Fire", slug: "free-fire" },
+  { name: "BGMI", slug: "bgmi" },
+  { name: "Genshin Impact", slug: "genshin-impact" },
+  { name: "COD Mobile", slug: "cod-mobile" },
+  { name: "Roblox", slug: "roblox" },
+  { name: "Honkai Star Rail", slug: "honkai-star-rail" },
+  { name: "PUBG Mobile", slug: "pubg-mobile" },
+  { name: "Wuthering Waves", slug: "wuthering-waves" },
+  { name: "ZZZ", slug: "zenless-zone-zero" },
+  { name: "Mobile Legends", slug: "mobile-legends" },
+  { name: "Honkai Impact 3rd", slug: "honkai-impact" },
 ];
 
 export default function HomePage() {
-  const featured = getFeaturedPosts().slice(0, 3);
   const allPosts = getAllPosts();
   const redeemPosts = getPostsByCategory("redeem-codes").slice(0, 4);
   const guidePosts = getPostsByCategory("game-guides").slice(0, 4);
@@ -45,8 +43,13 @@ export default function HomePage() {
   const esportsPosts = getPostsByCategory("esports-news").slice(0, 3);
   const dealPosts = getPostsByCategory("deals").slice(0, 3);
 
-  const totalPosts = allPosts.length;
-  const totalGames = new Set(allPosts.map((p) => p.subcategory).filter(Boolean)).size;
+  // Hero featured post (latest redeem codes — highest intent)
+  const heroPost = redeemPosts[0];
+  // Side posts for hero grid (mix of categories)
+  const heroPosts = [redeemPosts[1], guidePosts[0], proSettingsPosts[0], esportsPosts[0]].filter(Boolean);
+
+  // Count codes updated today
+  const totalActiveCodes = redeemPosts.reduce((sum, p) => sum + (p.codes?.filter(c => c.status !== "expired").length || 0), 0);
 
   // Search data (lightweight: only what's needed for search)
   const searchPosts = allPosts.map((p) => ({
@@ -60,102 +63,19 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ── Hero Section ─────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[var(--color-base)]">
-        {/* Background grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
-        {/* Radial glow top */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[var(--color-primary)]/5 blur-[120px]" />
-        {/* Radial glow bottom */}
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] rounded-full bg-[var(--color-accent)]/5 blur-[100px]" />
-
-        <div className="relative mx-auto max-w-7xl px-4 pt-16 pb-12 md:pt-24 md:pb-16">
-          {/* Top: Logo + tagline */}
-          <div className="text-center">
-            <h1 className="scanlines relative font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider">
-              <span className="text-[var(--color-primary)] glow-primary">RAID</span>
-              <span className="gradient-text">GG</span>
-            </h1>
-            <p className="mt-4 font-heading text-lg md:text-xl font-semibold text-[var(--color-text)] tracking-wide">
-              Your Ultimate Gaming Command Center
-            </p>
-            <p className="mt-2 max-w-xl mx-auto text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Daily redeem codes, game guides, pro settings, gear reviews &mdash; everything to level up your game.
-            </p>
-          </div>
-
-          {/* Search Bar */}
-          <div className="mt-8">
-            <SearchBar posts={searchPosts} />
-          </div>
-
-          {/* Stats + CTA row */}
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Stats */}
-            <div className="grid grid-cols-4 gap-3">
-              <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/60 p-3 text-center">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{totalPosts}+</p>
-                <p className="text-[10px] text-[var(--color-text-dim)] uppercase tracking-wider mt-1">Articles</p>
-              </div>
-              <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/60 p-3 text-center">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-[var(--color-accent)]">{totalGames}+</p>
-                <p className="text-[10px] text-[var(--color-text-dim)] uppercase tracking-wider mt-1">Games</p>
-              </div>
-              <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/60 p-3 text-center">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-[var(--color-success)]">8</p>
-                <p className="text-[10px] text-[var(--color-text-dim)] uppercase tracking-wider mt-1">Categories</p>
-              </div>
-              <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/60 p-3 text-center">
-                <p className="font-heading text-2xl md:text-3xl font-bold text-[var(--color-warning)]">Daily</p>
-                <p className="text-[10px] text-[var(--color-text-dim)] uppercase tracking-wider mt-1">Updates</p>
-              </div>
-            </div>
-
-            {/* CTA buttons */}
-            <div className="flex flex-wrap justify-center lg:justify-end gap-3">
-              <Link
-                href="/redeem-codes/"
-                className="rounded-lg bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-base)] transition-opacity hover:opacity-90"
-              >
-                Get Redeem Codes
-              </Link>
-              <Link
-                href="/game-guides/"
-                className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-              >
-                Browse Guides
-              </Link>
-              <Link
-                href="/pro-settings/"
-                className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-              >
-                Pro Settings
-              </Link>
-              <Link
-                href="/gaming-gear/"
-                className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-success)] hover:text-[var(--color-success)]"
-              >
-                Gaming Gear
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Quick Codes Bar ──────────────────────────────── */}
-      <section className="bg-[var(--color-surface)] border-y border-[var(--color-border)] py-4 overflow-x-auto">
+      {/* ── Trending Games Strip (first thing after header) ── */}
+      <section className="border-b border-[var(--color-border)] py-2 overflow-x-auto">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="flex items-center gap-3 min-w-max">
-            <span className="text-xs font-semibold text-[var(--color-text-dim)] uppercase tracking-wider whitespace-nowrap">
-              Quick Codes:
+          <div className="flex items-center gap-2 min-w-max">
+            <span className="text-[10px] font-bold text-[var(--color-primary)] uppercase tracking-widest whitespace-nowrap mr-1">
+              Codes
             </span>
             {codeGames.map((game) => (
               <Link
                 key={game.slug}
                 href={`/redeem-codes/${game.slug}/`}
-                className="flex items-center gap-1.5 rounded-full bg-[var(--color-surface-alt)] px-3 py-1.5 text-xs font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-colors whitespace-nowrap border border-[var(--color-border)] hover:border-[var(--color-primary)]/30"
+                className="rounded-full px-3 py-1 text-xs font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary)]/8 transition-colors whitespace-nowrap"
               >
-                <span>{game.icon}</span>
                 {game.name}
               </Link>
             ))}
@@ -163,16 +83,167 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 py-12 space-y-16">
-        {/* ── Featured Posts ───────────────────────────── */}
-        <section>
-          <h2 className="font-heading text-2xl font-bold text-[var(--color-text)] mb-6">
-            <span className="text-[var(--color-primary)]">//</span> Featured
-          </h2>
-          <div className="space-y-6">
-            {featured.map((post) => (
-              <FeaturedPost key={post.slug} post={post} />
+      {/* ── Hero: Content-First ─────────────────────────── */}
+      <section className="mx-auto max-w-7xl px-4 pt-6 pb-4 md:pt-8 md:pb-6">
+        {/* H1 + Live Badge */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+          <div>
+            <h1 className="font-heading text-2xl md:text-3xl font-bold text-[var(--color-text)] leading-tight">
+              Daily Redeem Codes, Game Guides & Pro Settings
+            </h1>
+            <p className="mt-1 text-sm text-[var(--color-text-muted)]">
+              Verified codes, expert guides, and pro player settings for 11+ games — updated daily.
+            </p>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-success)] opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-success)]" />
+            </span>
+            <span className="text-xs font-semibold text-[var(--color-success)]">
+              {totalActiveCodes}+ active codes today
+            </span>
+          </div>
+        </div>
+
+        {/* Search Bar — compact */}
+        <div className="mb-6">
+          <SearchBar posts={searchPosts} />
+        </div>
+
+        {/* Hero Content Grid: 1 large + 4 compact */}
+        <div className="grid gap-4 lg:grid-cols-5">
+          {/* Large featured card */}
+          {heroPost && (
+            <Link
+              href={getPostUrl(heroPost)}
+              className="group lg:col-span-3 block rounded-xl overflow-hidden bg-[var(--color-surface)] border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-all"
+            >
+              <div className="relative aspect-video w-full">
+                {heroPost.image ? (
+                  <img
+                    src={heroPost.image}
+                    alt={heroPost.imageAlt || heroPost.title}
+                    width={800}
+                    height={450}
+                    loading="eager"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-accent)]/20" />
+                )}
+                <span className="absolute top-3 left-3 rounded-full bg-[var(--color-primary)]/15 px-3 py-0.5 text-xs font-medium text-[var(--color-primary)] backdrop-blur">
+                  {heroPost.category.replace(/-/g, " ")}
+                </span>
+              </div>
+              <div className="p-4 md:p-5">
+                <h2 className="font-heading text-lg md:text-xl font-bold text-[var(--color-text)] leading-snug group-hover:text-[var(--color-primary)] transition-colors line-clamp-2">
+                  {heroPost.title}
+                </h2>
+                {heroPost.description && (
+                  <p className="mt-2 text-sm text-[var(--color-text-muted)] line-clamp-2">
+                    {heroPost.description}
+                  </p>
+                )}
+                <div className="mt-3 flex items-center gap-3 text-xs text-[var(--color-text-dim)]">
+                  <time dateTime={heroPost.updated || heroPost.date}>
+                    {formatDate(heroPost.updated || heroPost.date)}
+                  </time>
+                  {heroPost.readTime && <span>{heroPost.readTime}</span>}
+                  {heroPost.codes && heroPost.codes.length > 0 && (
+                    <span className="text-[var(--color-success)] font-medium">
+                      {heroPost.codes.filter(c => c.status !== "expired").length} active codes
+                    </span>
+                  )}
+                </div>
+              </div>
+            </Link>
+          )}
+
+          {/* Side compact posts */}
+          <div className="lg:col-span-2 flex flex-col gap-3">
+            {heroPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={getPostUrl(post)}
+                className="group flex gap-3 rounded-lg bg-[var(--color-surface)] p-3 border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-all"
+              >
+                <div className="shrink-0 w-20 h-16 rounded-md overflow-hidden">
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt || post.title}
+                      width={80}
+                      height={64}
+                      loading="eager"
+                      decoding="async"
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <div className="h-full w-full bg-gradient-to-br from-[var(--color-surface-alt)] to-[var(--color-border)]" />
+                  )}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-heading text-sm font-semibold text-[var(--color-text)] line-clamp-2 leading-snug group-hover:text-[var(--color-primary)] transition-colors">
+                    {post.title}
+                  </h3>
+                  <div className="mt-1 flex items-center gap-2 text-[10px] text-[var(--color-text-dim)]">
+                    <span className="font-medium text-[var(--color-primary)] uppercase">
+                      {post.category.replace(/-/g, " ")}
+                    </span>
+                    {post.readTime && <span>{post.readTime}</span>}
+                  </div>
+                </div>
+              </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-7xl px-4 py-8 space-y-14">
+        {/* ── Today's Codes Quick Access ─────────────────── */}
+        <section>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-heading text-xl font-bold text-[var(--color-text)]">
+              <span className="text-[var(--color-primary)]">//</span> Today&apos;s Codes
+            </h2>
+            <Link
+              href="/redeem-codes/"
+              className="text-sm text-[var(--color-primary)] hover:underline"
+            >
+              All games &rarr;
+            </Link>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {redeemPosts.map((post) => {
+              const activeCodes = post.codes?.filter(c => c.status !== "expired").length || 0;
+              const newCodes = post.codes?.filter(c => c.status === "new").length || 0;
+              return (
+                <Link
+                  key={post.slug}
+                  href={getPostUrl(post)}
+                  className="group rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 hover:border-[var(--color-primary)] transition-all"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-heading font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
+                      {post.game || post.title.split(" ")[0]}
+                    </span>
+                    {newCodes > 0 && (
+                      <span className="rounded-full bg-[var(--color-success)]/15 px-2 py-0.5 text-[10px] font-bold text-[var(--color-success)] uppercase">
+                        {newCodes} new
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-2xl font-bold text-[var(--color-primary)]">
+                    {activeCodes} <span className="text-xs font-normal text-[var(--color-text-muted)]">active codes</span>
+                  </p>
+                  <p className="mt-1 text-[10px] text-[var(--color-text-dim)]">
+                    Updated {formatDate(post.updated || post.date)}
+                  </p>
+                </Link>
+              );
+            })}
           </div>
         </section>
 

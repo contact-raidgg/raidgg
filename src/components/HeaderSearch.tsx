@@ -12,6 +12,7 @@ interface SearchPost {
 }
 
 function getUrl(post: SearchPost): string {
+  if (post.category === "redeem-codes" && post.subcategory) return `/${post.category}/${post.subcategory}/`;
   if (post.subcategory) return `/${post.category}/${post.subcategory}/${post.slug}/`;
   return `/${post.category}/${post.slug}/`;
 }

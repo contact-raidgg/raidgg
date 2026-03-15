@@ -1,14 +1,38 @@
 @import "tailwindcss";
 
+/* ── Light theme (default) ───────────────────────────── */
 @theme inline {
-  --color-base: #07080f;
+  --color-base: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef0f5;
+  --color-border: #dce0e8;
+  --color-border-light: #c8cdd6;
+  --color-text: #1a1b2e;
+  --color-text-muted: #4a4d5e;
+  --color-text-dim: #6b7080;
+  --color-primary: #0e7490;
+  --color-primary-dim: #0c6378;
+  --color-accent: #7c3aed;
+  --color-accent-dim: #6d28d9;
+  --color-success: #15803d;
+  --color-warning: #a16207;
+  --color-danger: #dc2626;
+  --color-link: #0e7490;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-heading: "Rajdhani", "Inter", sans-serif;
+}
+
+/* ── Dark theme ──────────────────────────────────────── */
+.dark {
+  --color-base: #0a0b14;
   --color-surface: #0d0f1a;
   --color-surface-alt: #141625;
   --color-border: #1e2035;
   --color-border-light: #2a2d45;
   --color-text: #e8e8f0;
   --color-text-muted: #8b8da0;
-  --color-text-dim: #5a5c70;
+  --color-text-dim: #8888a0;
   --color-primary: #00f0ff;
   --color-primary-dim: #00c4d0;
   --color-accent: #bf5af2;
@@ -17,11 +41,9 @@
   --color-warning: #ffd60a;
   --color-danger: #ff453a;
   --color-link: #00f0ff;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
-  --font-heading: "Rajdhani", "Inter", sans-serif;
 }
 
+/* ── Global styles ───────────────────────────────────── */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-border-light) var(--color-base);
@@ -36,24 +58,29 @@ body {
 }
 
 ::selection {
+  background: rgba(14, 116, 144, 0.15);
+  color: var(--color-text);
+}
+
+.dark ::selection {
   background: rgba(0, 240, 255, 0.2);
   color: #fff;
 }
 
-/* Neon glow utility */
-.glow-primary {
+/* ── Neon glow utility (dark mode only) ──────────────── */
+.dark .glow-primary {
   text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
 }
 
-.glow-accent {
+.dark .glow-accent {
   text-shadow: 0 0 10px rgba(191, 90, 242, 0.5), 0 0 20px rgba(191, 90, 242, 0.3);
 }
 
-.glow-box {
+.dark .glow-box {
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.15), 0 0 30px rgba(0, 240, 255, 0.05);
 }
 
-/* Card hover effect */
+/* ── Card hover effect ───────────────────────────────── */
 .card-hover {
   transition: all 0.3s ease;
   border: 1px solid var(--color-border);
@@ -61,11 +88,15 @@ body {
 
 .card-hover:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
-/* Gradient text */
+.dark .card-hover:hover {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+/* ── Gradient text ───────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
@@ -73,8 +104,8 @@ body {
   background-clip: text;
 }
 
-/* Scanline effect for hero */
-.scanlines::after {
+/* ── Scanline effect (dark mode only) ────────────────── */
+.dark .scanlines::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -88,7 +119,7 @@ body {
   pointer-events: none;
 }
 
-/* Article body styles */
+/* ── Article body styles ─────────────────────────────── */
 .prose-gaming h2 {
   color: var(--color-primary);
   font-family: var(--font-heading);
@@ -119,7 +150,7 @@ body {
 }
 
 .prose-gaming a:hover {
-  color: #fff;
+  color: var(--color-accent);
 }
 
 .prose-gaming ul, .prose-gaming ol {

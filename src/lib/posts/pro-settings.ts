@@ -132,7 +132,7 @@ const posts: PostMeta[] = [
         { text: "Neyoo BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/neyoo-bgmi-settings/" },
         { text: "BGMI Best Sensitivity Settings for No Recoil", href: "/game-guides/bgmi/bgmi-best-sensitivity-settings/" },
         { text: "BGMI Tips to Reach Conqueror", href: "/game-guides/bgmi/bgmi-tips-reach-conqueror/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
       ]},
     ],
@@ -409,7 +409,7 @@ const posts: PostMeta[] = [
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "Related Free Fire Content on RaidGG", links: [
-        { text: "Free Fire Redeem Codes (Today)", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
+        { text: "Free Fire Redeem Codes (Today)", href: "/redeem-codes/free-fire/" },
         { text: "Best Free Fire Sensitivity Settings", href: "/guides/free-fire/best-free-fire-sensitivity/" },
         { text: "Free Fire Diamond Top-Up Guide", href: "/guides/free-fire/free-fire-diamond-top-up/" },
         { text: "Best Gaming Phones Under 15K", href: "/gaming-phones/best-gaming-phones-under-15k/" },
@@ -992,7 +992,7 @@ const posts: PostMeta[] = [
         { text: "Jonathan BGMI Settings & Sensitivity", href: "/pro-settings/bgmi/jonathan-bgmi-settings/" },
         { text: "BGMI Best Sensitivity Settings for No Recoil", href: "/game-guides/bgmi/bgmi-best-sensitivity-settings/" },
         { text: "BGMI Tips to Reach Conqueror", href: "/game-guides/bgmi/bgmi-tips-reach-conqueror/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
       ]},
     ],
@@ -1434,7 +1434,7 @@ const posts: PostMeta[] = [
       { type: "internal-links", title: "Related COD Mobile Content on RaidGG", links: [
         { text: "Best COD Mobile Sensitivity Settings", href: "/guides/cod-mobile/best-cod-mobile-sensitivity/" },
         { text: "COD Mobile Best Guns Tier List", href: "/guides/cod-mobile/best-guns-tier-list/" },
-        { text: "COD Mobile Redeem Codes (Today)", href: "/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/" },
+        { text: "COD Mobile Redeem Codes (Today)", href: "/redeem-codes/cod-mobile/" },
         { text: "Best Gaming Phones Under 25K", href: "/gaming-phones/best-gaming-phones-under-25k/" },
         { text: "Best Gaming Phones Under 15K", href: "/gaming-phones/best-gaming-phones-under-15k/" },
       ]},

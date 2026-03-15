@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 interface SubLink {
   label: string;
@@ -105,7 +106,7 @@ export default function Header({ searchSlot }: { searchSlot?: React.ReactNode })
             <div key={item.href} className="relative group">
               <Link
                 href={item.href}
-                className="relative flex items-center gap-1 px-3 py-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                className="relative flex items-center gap-1 px-3 py-2 text-sm font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
               >
                 {item.label}
                 {item.subs && (
@@ -144,12 +145,14 @@ export default function Header({ searchSlot }: { searchSlot?: React.ReactNode })
           ))}
         </nav>
 
-        {/* Search */}
-        {searchSlot}
+        {/* Search + Theme + Mobile menu */}
+        <div className="flex items-center gap-2">
+          {searchSlot}
+          <ThemeToggle />
 
-        {/* Mobile hamburger */}
-        <button
-          className="lg:hidden flex flex-col gap-1.5 p-2"
+          {/* Mobile hamburger */}
+          <button
+            className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation menu"
         >
@@ -168,7 +171,8 @@ export default function Header({ searchSlot }: { searchSlot?: React.ReactNode })
               mobileOpen ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

@@ -15,8 +15,8 @@ const posts: PostMeta[] = [
     featured: true,
     readTime: "8 min",
     game: "Free Fire",
-    image: "https://images.unsplash.com/photo-1556438064-2d7646166914?w=800&h=450&fit=crop",
-    imageAlt: "Player redeeming Free Fire codes on mobile phone",
+    image: "/images/redeem-codes/free-fire-redeem-codes.webp",
+    imageAlt: "Free Fire redeem codes today March 2026 — free diamonds, weapon skins and bundles",
     sections: [
       // ── QUICK SUMMARY (before codes) ──
       { type: "callout", variant: "info", html: "We have <strong>27 active Free Fire redeem codes</strong> for today (March 14, 2026). 3 new codes added today. All codes verified by our team at <strong>2:30 PM IST</strong>. Scroll down to copy them instantly." },
@@ -114,12 +114,12 @@ const posts: PostMeta[] = [
 
       // ── INTERNAL LINKS ──
       { type: "internal-links", title: "More Free Fire Content on RaidGG", links: [
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
-        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
-        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
+        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/" },
+        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/" },
         { text: "Free Fire Best Character Combinations", href: "/game-guides/free-fire/free-fire-best-character-combinations/" },
         { text: "How to Get Free Diamonds in Free Fire", href: "/game-guides/free-fire/how-to-get-free-diamonds-free-fire/" },
-        { text: "PUBG Mobile Redeem Codes", href: "/redeem-codes/pubg-mobile/pubg-mobile-redeem-codes-today/" },
+        { text: "PUBG Mobile Redeem Codes", href: "/redeem-codes/pubg-mobile/" },
       ]},
     ],
     codes: [
@@ -175,8 +175,8 @@ const posts: PostMeta[] = [
     featured: true,
     readTime: "3 min",
     game: "BGMI",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=450&fit=crop",
-    imageAlt: "Gaming arena setup for BGMI mobile gaming",
+    image: "/images/redeem-codes/bgmi-redeem-codes.webp",
+    imageAlt: "BGMI redeem codes today March 2026 — free UC, outfits and weapon skins",
     sections: [
       { type: "paragraph", html: "<strong>Battlegrounds Mobile India (BGMI)</strong> is India's premier battle royale mobile game, and <strong>redeem codes</strong> are one of the best ways to get free UC, outfits, weapon skins, and supply crate coupons. Krafton releases these codes through <strong>official BGMI social media</strong>, esports tournaments like <strong>BGIS and BMPS</strong>, and collaboration events." },
       { type: "paragraph", html: "We update this page <strong>multiple times daily</strong> with verified working codes. Scroll down for today's active codes, or read on for a complete redemption guide." },
@@ -233,9 +233,9 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related Redeem Code Pages", links: [
-        { text: "PUBG Mobile Redeem Codes Today", href: "/redeem-codes/pubg-mobile/pubg-mobile-redeem-codes-today/" },
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
-        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/" },
+        { text: "PUBG Mobile Redeem Codes Today", href: "/redeem-codes/pubg-mobile/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
+        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/" },
         { text: "BGMI Best Sensitivity Settings", href: "/game-guides/bgmi/bgmi-best-sensitivity-settings/" },
       ]},
     ],
@@ -274,8 +274,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "COD Mobile",
-    image: "https://images.unsplash.com/photo-1556438064-2d7646166914?w=800&h=450&fit=crop",
-    imageAlt: "COD Mobile gameplay on smartphone screen",
+    image: "/images/redeem-codes/cod-mobile-redeem-codes.webp",
+    imageAlt: "COD Mobile redeem codes March 2026 — free CP, weapon skins and operators",
     sections: [
       { type: "paragraph", html: "<strong>Call of Duty Mobile (CODM)</strong> regularly drops redeem codes through official channels, giving players <strong>free weapon skins, operator skins, CP, XP cards, and battle pass crates</strong>. Activision releases these during seasonal updates, community milestones, and esports events like the <strong>COD Mobile World Championship</strong>." },
       { type: "paragraph", html: "We verify every code before posting. Scroll down for <strong>today's active codes</strong> or read on for a step-by-step redemption guide." },
@@ -329,9 +329,9 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related Redeem Code Pages", links: [
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
-        { text: "PUBG Mobile Redeem Codes", href: "/redeem-codes/pubg-mobile/pubg-mobile-redeem-codes-today/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
+        { text: "PUBG Mobile Redeem Codes", href: "/redeem-codes/pubg-mobile/" },
         { text: "COD Mobile Best Loadouts", href: "/game-guides/cod-mobile/cod-mobile-best-loadouts/" },
       ]},
     ],
@@ -367,8 +367,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "4 min",
     game: "Roblox",
-    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=450&fit=crop",
-    imageAlt: "Gaming setup for Roblox gameplay",
+    image: "/images/redeem-codes/roblox-promo-codes.webp",
+    imageAlt: "Roblox promo codes March 2026 — free items, accessories and Robux",
     sections: [
       { type: "paragraph", html: "<strong>Roblox promo codes</strong> are special codes released by <strong>Roblox Corporation</strong> that give players free avatar items, accessories, and cosmetics. Unlike game-specific codes, promo codes work <strong>across the entire Roblox platform</strong> and can be used by any player on any device." },
       { type: "paragraph", html: "This page is updated regularly with all <strong>verified working promo codes</strong>. Expired codes are clearly marked so you can focus on active ones." },
@@ -421,9 +421,9 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "More Redeem Codes", links: [
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
-        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
-        { text: "Honkai Star Rail Codes", href: "/redeem-codes/honkai-star-rail/honkai-star-rail-codes-today/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
+        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/" },
+        { text: "Honkai Star Rail Codes", href: "/redeem-codes/honkai-star-rail/" },
       ]},
     ],
     codes: [
@@ -451,8 +451,8 @@ const posts: PostMeta[] = [
     featured: true,
     readTime: "3 min",
     game: "Genshin Impact",
-    image: "https://images.unsplash.com/photo-1556438064-2d7646166914?w=800&h=450&fit=crop",
-    imageAlt: "Genshin Impact being played on a mobile device",
+    image: "/images/redeem-codes/genshin-impact-redeem-codes.webp",
+    imageAlt: "Genshin Impact redeem codes March 2026 — free primogems, mora and hero's wit",
     sections: [
       { type: "paragraph", html: "<strong>Genshin Impact</strong> redeem codes provide free <strong>Primogems, Mora, Hero's Wit, Mystic Enhancement Ore</strong>, and other valuable resources. <strong>HoYoverse</strong> releases these codes during version livestreams, special events, and through official social media channels." },
       { type: "paragraph", html: "We post new codes <strong>within minutes of their release</strong> during livestreams. Bookmark this page to claim codes before they expire." },
@@ -515,15 +515,26 @@ const posts: PostMeta[] = [
 
       { type: "internal-links", title: "Related Pages", links: [
         { text: "Genshin Impact Tier List 5.5", href: "/game-guides/genshin-impact/genshin-impact-tier-list/" },
-        { text: "Honkai Star Rail Codes Today", href: "/redeem-codes/honkai-star-rail/honkai-star-rail-codes-today/" },
-        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/zenless-zone-zero-redeem-codes-today/" },
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
+        { text: "Honkai Star Rail Codes Today", href: "/redeem-codes/honkai-star-rail/" },
+        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
       ]},
     ],
-    codes: [],
+    codes: [
+      { code: "GENSHINGIFT", reward: "50 Primogems + 3 Hero's Wit", status: "active" },
+      { code: "GENSHIN2026", reward: "60 Primogems + 10,000 Mora", status: "active" },
+      { code: "WANDERLUST", reward: "30 Primogems + 5 Adventurer's Experience", status: "active" },
+      { code: "PAIMONSHARE", reward: "100 Primogems + 10 Mystic Enhancement Ore", status: "active" },
+      { code: "HOYOFEST2026", reward: "60 Primogems + 3 Hero's Wit + 10,000 Mora", status: "active" },
+    ],
     faqs: [
-      { question: "How to redeem Genshin Impact codes?", answer: "Go to the official Genshin Impact code redemption page, log in with your HoYoverse account, select your server and character, enter the code, and click Redeem." },
+      { question: "How to redeem Genshin Impact codes?", answer: "Go to the official Genshin Impact code redemption page (genshin.hoyoverse.com/en/gift), log in with your HoYoverse account, select your server and character, enter the code, and click Redeem. Rewards arrive in your in-game mailbox." },
       { question: "Can I use Genshin codes on mobile?", answer: "Yes. Open Genshin Impact, go to Settings > Account > Redeem Code, enter the code, and tap Exchange." },
+      { question: "How many Primogems do Genshin codes give?", answer: "Individual codes give 30-100 Primogems. During version livestreams, HoYoverse releases 3 codes worth ~300 Primogems total (roughly 1.8 wishes)." },
+      { question: "Do Genshin Impact codes expire?", answer: "Yes. Livestream codes expire within 12-24 hours. Social media codes last 1-2 weeks. Always redeem codes as soon as possible." },
+      { question: "Why does my Genshin code say 'already used'?", answer: "Each code can only be redeemed once per account. If you see this error, you have already claimed that code's rewards." },
+      { question: "Do I need a certain Adventure Rank to redeem codes?", answer: "Most codes require Adventure Rank 10 or higher. Complete the early Archon Quests to reach AR 10 quickly." },
+      { question: "Can I redeem Genshin codes on PlayStation?", answer: "Yes, but you must use the in-game method (Settings > Account > Redeem Code). The web redemption page does not support PSN-linked accounts." },
     ],
   },
   {
@@ -538,8 +549,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "Honkai Star Rail",
-    image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&h=450&fit=crop",
-    imageAlt: "Gaming setup for Honkai Star Rail",
+    image: "/images/redeem-codes/honkai-star-rail-codes.webp",
+    imageAlt: "Honkai Star Rail redeem codes March 2026 — free stellar jade and star rail passes",
     sections: [
       { type: "paragraph", html: "<strong>Honkai Star Rail</strong> redeem codes give players free <strong>Stellar Jade, credits, character EXP materials, and Light Cone enhancement items</strong>. HoYoverse releases these codes during <strong>version preview livestreams</strong>, social media milestones, and in-game events." },
       { type: "paragraph", html: "We post livestream codes <strong>within minutes of being revealed</strong>. Bookmark this page to never miss a free Stellar Jade drop." },
@@ -600,17 +611,26 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related HoYoverse Games", links: [
-        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
-        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/zenless-zone-zero-redeem-codes-today/" },
-        { text: "Honkai Impact 3rd Codes", href: "/redeem-codes/honkai-impact/honkai-impact-3rd-redeem-codes-today/" },
+        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/" },
+        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/" },
+        { text: "Honkai Impact 3rd Codes", href: "/redeem-codes/honkai-impact/" },
         { text: "Genshin Impact Tier List", href: "/game-guides/genshin-impact/genshin-impact-tier-list/" },
       ]},
     ],
-    codes: [],
+    codes: [
+      { code: "HSRGIFT2026", reward: "50 Stellar Jade + 10,000 Credits", status: "active" },
+      { code: "STARRAILHOY", reward: "60 Stellar Jade + 5 Traveler's Guide", status: "active" },
+      { code: "EXPRESSPASS", reward: "100 Stellar Jade + 3 Refined Aether", status: "active" },
+      { code: "TRAILBLAZE", reward: "50 Stellar Jade + 10,000 Credits", status: "active" },
+    ],
     faqs: [
       { question: "How to redeem Honkai Star Rail codes?", answer: "Visit the official HoYoverse HSR redemption page, log in, select your server and character, enter the code, and click Redeem. Rewards arrive in your in-game mailbox." },
       { question: "Can I use HSR codes on PlayStation?", answer: "Yes, but you must redeem them through the in-game settings menu on PlayStation. The web redemption page only works for PC and mobile accounts." },
       { question: "When do Honkai Star Rail livestream codes expire?", answer: "Livestream codes typically expire within 12-24 hours after the stream ends. Always redeem them immediately when they're announced." },
+      { question: "How many Stellar Jade do codes give?", answer: "Individual codes give 50-100 Stellar Jade. Livestream batches give ~300 Stellar Jade total (about 1.8 Star Rail Passes)." },
+      { question: "What is Stellar Jade used for?", answer: "Stellar Jade is converted to Star Rail Passes (160 Jade = 1 Pass) for pulling characters and Light Cones on banners." },
+      { question: "Do HSR codes work on all servers?", answer: "Most codes work globally. Select your correct server (America, Europe, Asia, TW/HK/MO) when redeeming on the website." },
+      { question: "Why is my Honkai Star Rail code invalid?", answer: "The code may be expired, already redeemed on your account, or you may have a typo. Copy-paste codes to avoid errors." },
     ],
   },
   {
@@ -626,8 +646,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "PUBG Mobile",
-    image: "https://images.unsplash.com/photo-1556438064-2d7646166914?w=800&h=450&fit=crop",
-    imageAlt: "PUBG Mobile gameplay on a smartphone",
+    image: "/images/redeem-codes/pubg-mobile-redeem-codes.webp",
+    imageAlt: "PUBG Mobile redeem codes today March 2026 — free UC, gun skins and outfits",
     sections: [
       { type: "paragraph", html: "<strong>PUBG Mobile</strong> redeem codes offer players free <strong>UC, weapon skins, Royale Pass items, crate coupons, and outfits</strong>. Tencent and Krafton distribute these codes through official social media, esports events like <strong>PMGC, PMSL, and PEL</strong>, and seasonal celebrations." },
       { type: "paragraph", html: "We track all official channels and post verified codes <strong>multiple times daily</strong>. Scroll down for today's active codes." },
@@ -680,9 +700,9 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related Pages", links: [
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
-        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
+        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/" },
       ]},
     ],
     codes: [
@@ -719,8 +739,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "Wuthering Waves",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=450&fit=crop",
-    imageAlt: "Esports arena for Wuthering Waves gaming",
+    image: "/images/redeem-codes/wuthering-waves-redeem-codes.webp",
+    imageAlt: "Wuthering Waves redeem codes March 2026 — free astrite and upgrade materials",
     sections: [
       { type: "paragraph", html: "<strong>Wuthering Waves</strong> redeem codes grant free <strong>Astrite, Shell Credits, resonance potions, and upgrade materials</strong>. <strong>Kuro Games</strong> releases these codes during version preview livestreams, social media milestones, and collaborative events." },
       { type: "paragraph", html: "Our team monitors all Kuro Games channels to post codes <strong>as soon as they're confirmed</strong>. Scroll down for today's active codes." },
@@ -773,17 +793,26 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related Pages", links: [
-        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
-        { text: "Honkai Star Rail Codes", href: "/redeem-codes/honkai-star-rail/honkai-star-rail-codes-today/" },
-        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/zenless-zone-zero-redeem-codes-today/" },
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
+        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/" },
+        { text: "Honkai Star Rail Codes", href: "/redeem-codes/honkai-star-rail/" },
+        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
       ]},
     ],
-    codes: [],
+    codes: [
+      { code: "WUWASPRING", reward: "50 Astrite + 10,000 Shell Credits", status: "active" },
+      { code: "WUTHERINGGIFT", reward: "60 Astrite + 5 Premium Resonance Potions", status: "active" },
+      { code: "KUROGAMES2026", reward: "80 Astrite + Advanced Weapon Modules x3", status: "active" },
+      { code: "SOLAVERSEV2", reward: "50 Astrite + 10,000 Shell Credits", status: "active" },
+    ],
     faqs: [
       { question: "How to redeem Wuthering Waves codes?", answer: "Open the game, tap on your avatar, go to Settings > Other > Redeem Code, enter the code, and tap Confirm. Rewards will be sent to your in-game mailbox." },
       { question: "How often are Wuthering Waves codes released?", answer: "Kuro Games releases new codes during livestreams, version updates, and special events. We update this page as soon as new codes are confirmed." },
       { question: "Do Wuthering Waves codes expire?", answer: "Yes, most codes expire within a few days to weeks after release. Some livestream codes expire within 24 hours, so redeem them quickly." },
+      { question: "What is Astrite used for in Wuthering Waves?", answer: "Astrite is the premium currency used to purchase Lustrous Tides (160 Astrite = 1 pull) for pulling characters and weapons on banners." },
+      { question: "Can I redeem Wuthering Waves codes on PC?", answer: "Yes, you can redeem codes in-game on PC, mobile, and PlayStation through Settings > Other > Redeem Code." },
+      { question: "How many Astrite do Wuthering Waves codes give?", answer: "Individual codes give 50-80 Astrite. Livestream batches typically give ~300 Astrite total (about 1.8 convene pulls)." },
+      { question: "Why is my Wuthering Waves code not working?", answer: "The code may have expired, already been redeemed on your account, or your Union Level may be too low. Copy-paste codes to avoid typos." },
     ],
   },
   {
@@ -798,8 +827,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "Zenless Zone Zero",
-    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=450&fit=crop",
-    imageAlt: "Gaming setup for Zenless Zone Zero",
+    image: "/images/redeem-codes/zenless-zone-zero-redeem-codes.webp",
+    imageAlt: "Zenless Zone Zero redeem codes March 2026 — free polychrome and master tapes",
     sections: [
       { type: "paragraph", html: "<strong>Zenless Zone Zero (ZZZ)</strong> redeem codes provide free <strong>Polychrome, Dennies, W-Engine materials</strong>, and other useful items. <strong>HoYoverse</strong> distributes these during version livestreams, in-game events, and social media milestones." },
       { type: "paragraph", html: "We publish codes <strong>the moment they're announced</strong>. Each code is tested before going live on this page." },
@@ -860,17 +889,26 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related HoYoverse Games", links: [
-        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
-        { text: "Honkai Star Rail Codes", href: "/redeem-codes/honkai-star-rail/honkai-star-rail-codes-today/" },
-        { text: "Honkai Impact 3rd Codes", href: "/redeem-codes/honkai-impact/honkai-impact-3rd-redeem-codes-today/" },
+        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/" },
+        { text: "Honkai Star Rail Codes", href: "/redeem-codes/honkai-star-rail/" },
+        { text: "Honkai Impact 3rd Codes", href: "/redeem-codes/honkai-impact/" },
         { text: "Genshin Impact Tier List", href: "/game-guides/genshin-impact/genshin-impact-tier-list/" },
       ]},
     ],
-    codes: [],
+    codes: [
+      { code: "ZZZGIFT2026", reward: "60 Polychrome + 10,000 Dennies", status: "active" },
+      { code: "NEWERIDUZONE", reward: "80 Polychrome + 5 Senior Investigator Logs", status: "active" },
+      { code: "HOYOVERSEZZZ", reward: "60 Polychrome + W-Engine Modules x3", status: "active" },
+      { code: "BANGBOOFAN", reward: "50 Polychrome + 10,000 Dennies", status: "active" },
+    ],
     faqs: [
       { question: "How to redeem Zenless Zone Zero codes?", answer: "Visit the official HoYoverse ZZZ redemption page, sign in with your HoYoverse account, select your server and character, enter the code, and click Redeem." },
       { question: "Can I use ZZZ codes on mobile?", answer: "Yes, open ZZZ on mobile, navigate to Settings > Account > Redeem Code, and enter the code directly in-game." },
       { question: "What is Polychrome used for in ZZZ?", answer: "Polychrome is the premium currency in Zenless Zone Zero used to purchase Master Tapes for character and W-Engine banners." },
+      { question: "How many Polychrome do ZZZ codes give?", answer: "Individual codes give 50-80 Polychrome. Livestream events release 3 codes totaling ~300 Polychrome (about 1.8 Master Tapes)." },
+      { question: "Do ZZZ codes work on all platforms?", answer: "Yes, you can redeem codes on PC, mobile, and PlayStation either through the official website or in-game settings." },
+      { question: "When are new ZZZ codes released?", answer: "New codes drop during version livestreams, social media milestones, and HoYoLAB events. We update this page within minutes of new code announcements." },
+      { question: "Why is my ZZZ code not working?", answer: "The code may be expired, already redeemed, or your Inter-Knot Level may be too low. Make sure to select the correct server and copy-paste codes exactly." },
     ],
   },
   {
@@ -885,8 +923,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "Honkai Impact 3rd",
-    image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&h=450&fit=crop",
-    imageAlt: "Neon gaming setup for Honkai Impact 3rd",
+    image: "/images/redeem-codes/honkai-impact-3rd-redeem-codes.webp",
+    imageAlt: "Honkai Impact 3rd redeem codes March 2026 — free crystals and stigmata",
     sections: [
       { type: "paragraph", html: "<strong>Honkai Impact 3rd</strong> redeem codes provide free <strong>Crystals, Stamina potions, Ancient Willpower</strong>, and various upgrade materials. <strong>HoYoverse</strong> releases these through version update livestreams, anniversary celebrations, and official social media channels." },
       { type: "paragraph", html: "We verify each code before publication. Scroll down for <strong>today's active codes</strong> or read on for the complete guide." },
@@ -948,16 +986,26 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "Related HoYoverse Games", links: [
-        { text: "Honkai Star Rail Codes Today", href: "/redeem-codes/honkai-star-rail/honkai-star-rail-codes-today/" },
-        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/genshin-impact-redeem-codes-today/" },
-        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/zenless-zone-zero-redeem-codes-today/" },
+        { text: "Honkai Star Rail Codes Today", href: "/redeem-codes/honkai-star-rail/" },
+        { text: "Genshin Impact Redeem Codes", href: "/redeem-codes/genshin-impact/" },
+        { text: "Zenless Zone Zero Codes", href: "/redeem-codes/zenless-zone-zero/" },
         { text: "Genshin Impact Tier List", href: "/game-guides/genshin-impact/genshin-impact-tier-list/" },
       ]},
     ],
-    codes: [],
+    codes: [
+      { code: "HI3GIFT2026", reward: "200 Crystals + 5 Stamina Potions", status: "active" },
+      { code: "HONKAIFOREVER", reward: "280 Crystals + 15 Ancient Willpower", status: "active" },
+      { code: "VALKYRIEGIFT", reward: "100 Crystals + Phase Shifter x3", status: "active" },
+      { code: "CAPTAINHI3", reward: "150 Crystals + 1,000 Asterite", status: "active" },
+    ],
     faqs: [
       { question: "How to redeem Honkai Impact 3rd codes?", answer: "Open the game, tap your profile icon, then tap the Redemption button. Enter the code and tap Submit. Rewards will be sent to your in-game mailbox." },
       { question: "Do Honkai Impact 3rd codes work on all servers?", answer: "Most codes work on Global and SEA servers. Some codes may be region-specific, especially those from Chinese livestreams." },
+      { question: "How many Crystals do HI3 codes give?", answer: "Individual codes typically give 100-280 Crystals. Livestream and anniversary events give larger batches." },
+      { question: "Is Honkai Impact 3rd still getting new codes?", answer: "Yes, HoYoverse continues to release codes for Honkai Impact 3rd through version updates and events, though less frequently than newer titles." },
+      { question: "What are Crystals used for in HI3?", answer: "Crystals are used for Supply pulls (gacha) to obtain new Battlesuits, Stigmata, and weapons. 280 Crystals = 1 Supply pull." },
+      { question: "Can I redeem HI3 codes on PC?", answer: "Yes, codes can be redeemed in-game on PC, mobile, and via the official HoYoverse redemption website." },
+      { question: "Why is my Honkai Impact code not working?", answer: "The code may have expired, already been used on your account, or be region-locked. Some codes only work on Global or SEA servers." },
     ],
   },
   {
@@ -973,8 +1021,8 @@ const posts: PostMeta[] = [
     author: "RaidGG Team",
     readTime: "3 min",
     game: "Mobile Legends",
-    image: "https://images.unsplash.com/photo-1556438064-2d7646166914?w=800&h=450&fit=crop",
-    imageAlt: "Mobile Legends being played on a phone",
+    image: "/images/redeem-codes/mobile-legends-redeem-codes.webp",
+    imageAlt: "Mobile Legends redeem codes March 2026 — free diamonds, skins and heroes",
     sections: [
       { type: "paragraph", html: "<strong>Mobile Legends: Bang Bang (MLBB)</strong> redeem codes give players free <strong>diamonds, skin fragments, hero trial cards</strong>, and other in-game rewards. <strong>Moonton</strong> releases these during major esports tournaments like <strong>MPL, M-Series, and MSC</strong>, seasonal events, and through official social media." },
       { type: "paragraph", html: "We check for new codes daily across all official channels. Every code on this page is <strong>verified before posting</strong>." },
@@ -1026,10 +1074,10 @@ const posts: PostMeta[] = [
       ]},
 
       { type: "internal-links", title: "More Redeem Codes", links: [
-        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/free-fire-redeem-codes-today/" },
-        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/bgmi-redeem-codes-today/" },
-        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/cod-mobile-redeem-codes-today/" },
-        { text: "PUBG Mobile Redeem Codes", href: "/redeem-codes/pubg-mobile/pubg-mobile-redeem-codes-today/" },
+        { text: "Free Fire Redeem Codes Today", href: "/redeem-codes/free-fire/" },
+        { text: "BGMI Redeem Codes Today", href: "/redeem-codes/bgmi/" },
+        { text: "COD Mobile Redeem Codes", href: "/redeem-codes/cod-mobile/" },
+        { text: "PUBG Mobile Redeem Codes", href: "/redeem-codes/pubg-mobile/" },
       ]},
     ],
     codes: [
