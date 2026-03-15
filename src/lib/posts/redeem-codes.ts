@@ -521,11 +521,7 @@ const posts: PostMeta[] = [
       ]},
     ],
     codes: [
-      { code: "GENSHINGIFT", reward: "50 Primogems + 3 Hero's Wit", status: "active" },
-      { code: "GENSHIN2026", reward: "60 Primogems + 10,000 Mora", status: "active" },
-      { code: "WANDERLUST", reward: "30 Primogems + 5 Adventurer's Experience", status: "active" },
-      { code: "PAIMONSHARE", reward: "100 Primogems + 10 Mystic Enhancement Ore", status: "active" },
-      { code: "HOYOFEST2026", reward: "60 Primogems + 3 Hero's Wit + 10,000 Mora", status: "active" },
+      { code: "GENSHINGIFT", reward: "50 Primogems + 3 Hero's Wit (permanent code)", status: "active" },
     ],
     faqs: [
       { question: "How to redeem Genshin Impact codes?", answer: "Go to the official Genshin Impact code redemption page (genshin.hoyoverse.com/en/gift), log in with your HoYoverse account, select your server and character, enter the code, and click Redeem. Rewards arrive in your in-game mailbox." },
@@ -618,10 +614,7 @@ const posts: PostMeta[] = [
       ]},
     ],
     codes: [
-      { code: "HSRGIFT2026", reward: "50 Stellar Jade + 10,000 Credits", status: "active" },
-      { code: "STARRAILHOY", reward: "60 Stellar Jade + 5 Traveler's Guide", status: "active" },
-      { code: "EXPRESSPASS", reward: "100 Stellar Jade + 3 Refined Aether", status: "active" },
-      { code: "TRAILBLAZE", reward: "50 Stellar Jade + 10,000 Credits", status: "active" },
+      { code: "STARRAILGIFT", reward: "50 Stellar Jade + 10,000 Credits (permanent code)", status: "active" },
     ],
     faqs: [
       { question: "How to redeem Honkai Star Rail codes?", answer: "Visit the official HoYoverse HSR redemption page, log in, select your server and character, enter the code, and click Redeem. Rewards arrive in your in-game mailbox." },
@@ -800,10 +793,7 @@ const posts: PostMeta[] = [
       ]},
     ],
     codes: [
-      { code: "WUWASPRING", reward: "50 Astrite + 10,000 Shell Credits", status: "active" },
-      { code: "WUTHERINGGIFT", reward: "60 Astrite + 5 Premium Resonance Potions", status: "active" },
-      { code: "KUROGAMES2026", reward: "80 Astrite + Advanced Weapon Modules x3", status: "active" },
-      { code: "SOLAVERSEV2", reward: "50 Astrite + 10,000 Shell Credits", status: "active" },
+      { code: "WUTHERINGGIFT", reward: "Astrite + Shell Credits (permanent code)", status: "active" },
     ],
     faqs: [
       { question: "How to redeem Wuthering Waves codes?", answer: "Open the game, tap on your avatar, go to Settings > Other > Redeem Code, enter the code, and tap Confirm. Rewards will be sent to your in-game mailbox." },
@@ -896,10 +886,7 @@ const posts: PostMeta[] = [
       ]},
     ],
     codes: [
-      { code: "ZZZGIFT2026", reward: "60 Polychrome + 10,000 Dennies", status: "active" },
-      { code: "NEWERIDUZONE", reward: "80 Polychrome + 5 Senior Investigator Logs", status: "active" },
-      { code: "HOYOVERSEZZZ", reward: "60 Polychrome + W-Engine Modules x3", status: "active" },
-      { code: "BANGBOOFAN", reward: "50 Polychrome + 10,000 Dennies", status: "active" },
+      { code: "ZZZ27CHAMPION", reward: "Polychrome + Dennies", status: "active" },
     ],
     faqs: [
       { question: "How to redeem Zenless Zone Zero codes?", answer: "Visit the official HoYoverse ZZZ redemption page, sign in with your HoYoverse account, select your server and character, enter the code, and click Redeem." },
@@ -992,12 +979,7 @@ const posts: PostMeta[] = [
         { text: "Genshin Impact Tier List", href: "/game-guides/genshin-impact/genshin-impact-tier-list/" },
       ]},
     ],
-    codes: [
-      { code: "HI3GIFT2026", reward: "200 Crystals + 5 Stamina Potions", status: "active" },
-      { code: "HONKAIFOREVER", reward: "280 Crystals + 15 Ancient Willpower", status: "active" },
-      { code: "VALKYRIEGIFT", reward: "100 Crystals + Phase Shifter x3", status: "active" },
-      { code: "CAPTAINHI3", reward: "150 Crystals + 1,000 Asterite", status: "active" },
-    ],
+    codes: [],
     faqs: [
       { question: "How to redeem Honkai Impact 3rd codes?", answer: "Open the game, tap your profile icon, then tap the Redemption button. Enter the code and tap Submit. Rewards will be sent to your in-game mailbox." },
       { question: "Do Honkai Impact 3rd codes work on all servers?", answer: "Most codes work on Global and SEA servers. Some codes may be region-specific, especially those from Chinese livestreams." },
